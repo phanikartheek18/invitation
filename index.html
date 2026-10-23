@@ -5,113 +5,646 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f0e2">
   <meta name="description" content="A beautiful digital invitation for Kalyani and Nandu's engagement ceremony on 25 November 2026.">
-  <title>A Beautiful Beginning | Kalyani & Nandu</title>
+  <title>Kalyani &amp; Nandu — Engagement Invitation</title>
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --ivory:#fffaf1; --cream:#f4e8d3; --gold:#b38748; --deep-gold:#79572c;
-      --rose:#985c68; --ink:#3c3025; --muted:#80715f; --line:rgba(179,135,72,.3);
+      --ivory: #fffaf1;
+      --cream: #f4e8d3;
+      --gold: #b38748;
+      --gold-light: #d8b87d;
+      --deep-gold: #79572c;
+      --rose: #985c68;
+      --ink: #3c3025;
+      --muted: #7b6d5c;
+      --line: rgba(179, 135, 72, 0.32);
+      --card-bg: rgba(255, 253, 247, 0.94);
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;
-      background:radial-gradient(ellipse at 15% 10%,rgba(216,180,123,.22),transparent 26rem),
-      radial-gradient(ellipse at 85% 70%,rgba(190,135,140,.12),transparent 28rem),
-      linear-gradient(145deg,#fffaf2,#f4e8d5 58%,#fff9ee);min-height:100vh}
-    .frame{position:fixed;inset:10px;border:1px solid rgba(179,135,72,.3);border-radius:20px;pointer-events:none;z-index:5}
-    .frame:before,.frame:after{content:"✦";position:absolute;left:50%;transform:translateX(-50%);background:#f8efdf;color:var(--gold);padding:0 10px;font-size:14px}
-    .frame:before{top:-9px}.frame:after{bottom:-9px}
-    .page{width:min(100% - 32px,900px);margin:auto;padding:38px 0 30px}
-    .hero{min-height:76vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:50px 16px 60px;position:relative;overflow:hidden}
-    .halo{position:absolute;width:min(76vw,440px);aspect-ratio:1;border:1px solid rgba(179,135,72,.23);border-radius:50%;box-shadow:0 0 0 18px rgba(179,135,72,.035),0 0 0 42px rgba(179,135,72,.025);pointer-events:none}
-    .topline{position:relative;font:700 10px/1.7 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--deep-gold)}
-    .symbol{position:relative;color:var(--gold);font-size:31px;margin:20px 0 13px}
-    h1{position:relative;font-size:clamp(44px,9vw,82px);font-weight:400;line-height:1.02;letter-spacing:-.045em;margin:0;color:var(--deep-gold)}
-    h1 span{font-size:.5em;color:var(--gold);font-style:italic;letter-spacing:0;padding:0 .12em}
-    .subtitle{position:relative;font:600 11px/1.6 Arial,sans-serif;text-transform:uppercase;letter-spacing:.32em;color:var(--rose);margin-top:17px}
-    .ornament{position:relative;color:var(--gold);letter-spacing:.45em;margin:23px 0}
-    .hero-copy{position:relative;max-width:460px;font-size:clamp(16px,2.5vw,19px);line-height:1.8;color:#655545;margin:0 auto 27px}
-    .open-btn,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s;font:600 12px Arial,sans-serif;letter-spacing:.04em}
-    .open-btn{position:relative;min-height:49px;padding:0 25px;color:#fff;background:linear-gradient(135deg,#bd985d,#80582c);border:1px solid #b18a4d;box-shadow:0 10px 24px rgba(121,87,44,.18)}
-    .open-btn:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(121,87,44,.18)}
-    .hint{position:relative;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#978570;margin-top:15px}
-    .invitation{scroll-margin-top:24px;text-align:center;padding:14px 0 30px}
-    .section-kicker{font:700 10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.24em;color:var(--deep-gold);margin:0 0 17px}
-    .poster-wrap{width:min(100%,570px);margin:0 auto;padding:9px;border:1px solid rgba(179,135,72,.42);border-radius:18px;background:rgba(255,253,247,.8);box-shadow:0 22px 60px rgba(79,47,13,.15)}
-    .poster{display:block;width:100%;height:auto;border-radius:10px}
-    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin:25px auto 12px}
-    .btn{min-height:46px;padding:12px 18px;border:1px solid var(--line);background:rgba(255,250,241,.82);color:var(--deep-gold)}
-    .btn-primary{background:linear-gradient(135deg,#bd985d,#80582c);color:white;border-color:#a98449}
-    .closing{text-align:center;padding:45px 10px 18px}
-    .closing .ornament{margin:0 0 17px}
-    .closing h2{font-size:clamp(25px,4.5vw,38px);font-weight:400;font-style:italic;color:var(--deep-gold);margin:0 0 12px}
-    .closing p{max-width:480px;margin:0 auto;color:var(--muted);line-height:1.7;font-size:15px}
-    .countdown{display:flex;justify-content:center;gap:9px;margin:25px auto 0}
-    .count-box{min-width:66px;padding:12px 8px 10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,250,241,.76)}
-    .count-box strong{display:block;font-size:23px;font-weight:400;color:var(--deep-gold);font-variant-numeric:tabular-nums}
-    .count-box span{display:block;margin-top:5px;font:9px Arial,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
-    footer{text-align:center;color:#9a8b78;font:10px Arial,sans-serif;letter-spacing:.06em;padding:20px 10px 8px}
-    .petal{position:fixed;top:-20px;z-index:4;pointer-events:none;opacity:0;color:#c9a16c;animation:fall linear infinite}
-    @keyframes fall{0%{transform:translateY(-10vh) rotate(0deg);opacity:0}10%{opacity:.5}90%{opacity:.4}100%{transform:translateY(110vh) rotate(330deg);opacity:0}}
-    @media(max-width:560px){.page{width:min(100% - 26px,900px);padding-top:24px}.hero{min-height:72vh;padding:40px 9px 45px}.frame{inset:6px;border-radius:15px}.actions{gap:8px}.btn{width:100%;max-width:290px}.countdown{gap:6px}.count-box{min-width:58px;padding:10px 5px}.count-box strong{font-size:20px}.topline{font-size:9px;letter-spacing:.2em}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: 'Playfair Display', Georgia, serif;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(216, 180, 123, 0.28), transparent 28rem),
+        radial-gradient(ellipse at 85% 70%, rgba(190, 135, 140, 0.16), transparent 30rem),
+        linear-gradient(145deg, #fffaf2, #f5e9d6 55%, #fff8ec);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Royal Frame */
+    .frame {
+      position: fixed;
+      inset: 12px;
+      border: 1px solid rgba(179, 135, 72, 0.38);
+      border-radius: 20px;
+      pointer-events: none;
+      z-index: 50;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+    .frame:before, .frame:after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f8efdf;
+      color: var(--gold);
+      padding: 0 12px;
+      font-size: 15px;
+    }
+    .frame:before { top: -10px; }
+    .frame:after { bottom: -10px; }
+
+    .page {
+      width: min(100% - 32px, 860px);
+      margin: auto;
+      padding: 20px 0 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Full-Screen Cover / Hero Screen */
+    .hero {
+      min-height: 92vh;
+      min-height: 92dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px 50px;
+      position: relative;
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero.opened {
+      min-height: auto;
+      padding: 30px 20px 20px;
+    }
+
+    .halo {
+      position: absolute;
+      width: min(84vw, 480px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(179, 135, 72, 0.25);
+      border-radius: 50%;
+      box-shadow: 0 0 0 20px rgba(179, 135, 72, 0.04), 0 0 0 45px rgba(179, 135, 72, 0.025);
+      pointer-events: none;
+      animation: rotateSlow 40s linear infinite;
+    }
+
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .topline {
+      position: relative;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--deep-gold);
+      margin-bottom: 4px;
+    }
+
+    .symbol {
+      position: relative;
+      color: var(--gold);
+      font-size: 34px;
+      margin: 16px 0 10px;
+      text-shadow: 0 0 16px rgba(179, 135, 72, 0.3);
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.95; }
+      50% { transform: scale(1.08); opacity: 1; text-shadow: 0 0 22px rgba(179, 135, 72, 0.55); }
+    }
+
+    h1 {
+      position: relative;
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: clamp(38px, 8.5vw, 76px);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      margin: 4px 0 10px;
+      color: var(--deep-gold);
+      text-shadow: 0 2px 8px rgba(121, 87, 44, 0.12);
+    }
+
+    h1 span {
+      font-family: 'Great Vibes', cursive;
+      font-size: 0.68em;
+      color: var(--gold);
+      font-weight: 400;
+      padding: 0 0.15em;
+      vertical-align: middle;
+    }
+
+    .subtitle {
+      position: relative;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.36em;
+      color: var(--rose);
+      margin-top: 10px;
+    }
+
+    .ornament {
+      position: relative;
+      color: var(--gold);
+      letter-spacing: 0.45em;
+      margin: 18px 0;
+      font-size: 15px;
+    }
+
+    .hero-copy {
+      position: relative;
+      max-width: 480px;
+      font-size: clamp(16px, 2.4vw, 19px);
+      line-height: 1.8;
+      color: #5c4e3f;
+      margin: 0 auto 30px;
+      font-style: italic;
+    }
+
+    /* Royal Open Button with Envelope Charm */
+    .open-btn-container {
+      position: relative;
+      margin-top: 5px;
+    }
+
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      min-height: 54px;
+      padding: 0 34px;
+      color: #fff;
+      background: linear-gradient(135deg, #c79e60, #7d5225);
+      border: 1px solid #dfbb7d;
+      box-shadow: 0 12px 28px rgba(121, 87, 44, 0.28), 0 0 0 4px rgba(179, 135, 72, 0.18);
+      transition: all 0.3s ease;
+      animation: buttonPulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes buttonPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 12px 28px rgba(121, 87, 44, 0.28), 0 0 0 4px rgba(179, 135, 72, 0.18);
+      }
+      50% {
+        transform: scale(1.04);
+        box-shadow: 0 16px 36px rgba(121, 87, 44, 0.38), 0 0 0 7px rgba(179, 135, 72, 0.25);
+      }
+    }
+
+    .open-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 16px 36px rgba(121, 87, 44, 0.35), 0 0 0 6px rgba(179, 135, 72, 0.24);
+      background: linear-gradient(135deg, #d3ab6d, #8d5d2b);
+    }
+
+    .open-btn .btn-icon {
+      font-size: 18px;
+    }
+
+    .hint {
+      position: relative;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8f7d6a;
+      margin-top: 18px;
+    }
+
+    /* Invitation Content Section (Initially Hidden!) */
+    #invitationContent {
+      display: none;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #invitationContent.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .invitation {
+      scroll-margin-top: 30px;
+      text-align: center;
+      padding: 10px 0 25px;
+    }
+
+    .section-kicker {
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      color: var(--deep-gold);
+      margin: 0 0 20px;
+    }
+
+    .poster-wrap {
+      width: min(100%, 580px);
+      margin: 0 auto;
+      padding: 10px;
+      border: 1px solid rgba(179, 135, 72, 0.45);
+      border-radius: 20px;
+      background: var(--card-bg);
+      box-shadow: 0 25px 65px rgba(79, 47, 13, 0.18), 0 4px 18px rgba(179, 135, 72, 0.12);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .poster-wrap:hover {
+      transform: translateY(-2px);
+    }
+
+    .poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 28px auto 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 241, 0.92);
+      color: var(--deep-gold);
+      box-shadow: 0 6px 16px rgba(121, 87, 44, 0.08);
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(121, 87, 44, 0.16);
+      background: #fff;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #bd985d, #80582c);
+      color: white;
+      border-color: #a98449;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #caa56a, #8f6433);
+      color: white;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 40px 10px 20px;
+    }
+
+    .closing .ornament {
+      margin: 0 0 16px;
+    }
+
+    .closing h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(24px, 4.2vw, 36px);
+      font-weight: 600;
+      color: var(--deep-gold);
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .closing p {
+      max-width: 500px;
+      margin: 0 auto;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 26px auto 0;
+    }
+
+    .count-box {
+      min-width: 70px;
+      padding: 13px 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 250, 241, 0.88);
+      box-shadow: 0 6px 16px rgba(121, 87, 44, 0.06);
+    }
+
+    .count-box strong {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 25px;
+      font-weight: 700;
+      color: var(--deep-gold);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .count-box span {
+      display: block;
+      margin-top: 5px;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      color: #9a8b78;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      padding: 24px 10px 10px;
+    }
+
+    /* Falling Petals & Confetti */
+    .petal {
+      position: fixed;
+      top: -20px;
+      z-index: 4;
+      pointer-events: none;
+      opacity: 0;
+      color: #c9a16c;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.55; }
+      90% { opacity: 0.45; }
+      100% { transform: translateY(110vh) rotate(340deg); opacity: 0; }
+    }
+
+    /* Burst Particle on Open */
+    .burst-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 100;
+      font-size: 18px;
+      animation: burstFloat 1.8s ease-out forwards;
+    }
+
+    @keyframes burstFloat {
+      0% {
+        transform: translate(0, 0) scale(0.6) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--tx), var(--ty)) scale(1.3) rotate(var(--rot));
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 24px, 860px);
+        padding-top: 16px;
+      }
+      .hero {
+        min-height: 88vh;
+        min-height: 88dvh;
+        padding: 30px 10px 35px;
+      }
+      .frame {
+        inset: 6px;
+        border-radius: 14px;
+      }
+      .actions {
+        gap: 9px;
+      }
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      .countdown {
+        gap: 6px;
+      }
+      .count-box {
+        min-width: 60px;
+        padding: 10px 6px;
+      }
+      .count-box strong {
+        font-size: 21px;
+      }
+      .topline {
+        font-size: 9px;
+        letter-spacing: 0.22em;
+      }
+      .open-btn {
+        min-height: 50px;
+        padding: 0 28px;
+        font-size: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *:before, *:after { animation: none !important; transition: none !important; }
+    }
   </style>
 </head>
 <body>
   <div class="frame" aria-hidden="true"></div>
+
   <main class="page">
-    <section class="hero" aria-label="Welcome">
+    <!-- Screen 1: Welcome & Envelope Cover Screen -->
+    <section class="hero" id="heroSection" aria-label="Welcome Invitation">
       <div class="halo" aria-hidden="true"></div>
       <div class="topline">With the blessings of the Almighty</div>
       <div class="symbol" aria-hidden="true">ॐ</div>
       <h1>Kalyani <span>&amp;</span> Nandu</h1>
       <div class="subtitle">Engagement Ceremony</div>
       <div class="ornament" aria-hidden="true">❦　✦　❦</div>
-      <p class="hero-copy">Two families, one beautiful beginning.<br>We would be delighted to celebrate this special moment with you.</p>
-      <a class="open-btn" href="#invitation">✧ &nbsp; Open Invitation &nbsp; ↓</a>
-      <div class="hint">A celebration of love, family &amp; new beginnings</div>
+      <p class="hero-copy">Two families, one beautiful beginning.<br>We warmly invite you to celebrate this auspicious occasion with us.</p>
+      
+      <div class="open-btn-container">
+        <button class="open-btn" id="openInvitationBtn" type="button" aria-expanded="false" aria-controls="invitationContent">
+          <span class="btn-icon">✉</span>
+          <span>Open Invitation</span>
+          <span>✦</span>
+        </button>
+      </div>
+      
+      <div class="hint" id="openHint">Tap to unfold the invitation card</div>
     </section>
 
-    <section class="invitation" id="invitation" aria-label="Invitation card">
-      <p class="section-kicker">A heartfelt invitation to you</p>
-      <div class="poster-wrap">
-        <img class="poster" src="engagement-invitation.png" alt="Kalyani and Nandu's engagement invitation card with event details">
-      </div>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic" target="_blank" rel="noopener noreferrer">⌖ &nbsp; Explore Venue</a>
-        <button class="btn" id="calendarBtn" type="button">＋ &nbsp; Save the Date</button>
-        <button class="btn" id="shareBtn" type="button">↗ &nbsp; Share with Family</button>
-      </div>
-    </section>
+    <!-- Screen 2: Invitation Card & Details (Revealed on Open) -->
+    <div id="invitationContent">
+      <section class="invitation" id="invitation" aria-label="Invitation card">
+        <p class="section-kicker">✦ &nbsp; Official Invitation &nbsp; ✦</p>
+        <div class="poster-wrap" id="posterWrap">
+          <img class="poster" src="engagement-invitation.png" alt="Kalyani and Nandu's engagement invitation card with event details">
+        </div>
 
-    <section class="closing" aria-label="Countdown">
-      <div class="ornament" aria-hidden="true">✦　❦　✦</div>
-      <h2>The countdown to a beautiful day</h2>
-      <p>Wednesday, 25 November 2026 · 9:30 AM onwards<br>Hotel Surya Grands, Vijayawada</p>
-      <div class="countdown" id="countdown" aria-label="Countdown to the engagement">
-        <div class="count-box"><strong id="days">—</strong><span>Days</span></div>
-        <div class="count-box"><strong id="hours">—</strong><span>Hours</span></div>
-        <div class="count-box"><strong id="minutes">—</strong><span>Minutes</span></div>
-        <div class="count-box"><strong id="seconds">—</strong><span>Seconds</span></div>
-      </div>
-      <div class="ornament" aria-hidden="true" style="margin-top:28px">❦　✦　❦</div>
-      <p style="font-style:italic;color:var(--deep-gold)">With the love and blessings of our families</p>
-    </section>
-    <footer>Made with love for Kalyani &amp; Nandu · 25 November 2026</footer>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic" target="_blank" rel="noopener noreferrer">
+            📍 &nbsp; Explore Venue
+          </a>
+          <button class="btn" id="calendarBtn" type="button">
+            📅 &nbsp; Save the Date
+          </button>
+          <button class="btn" id="shareBtn" type="button">
+            ✨ &nbsp; Share on WhatsApp
+          </button>
+        </div>
+      </section>
+
+      <section class="closing" aria-label="Countdown">
+        <div class="ornament" aria-hidden="true">✦　❦　✦</div>
+        <h2>The countdown to our special day</h2>
+        <p>Wednesday, 25 November 2026 · 9:30 AM onwards<br><strong>Hotel Surya Grands</strong>, Vijayawada</p>
+        
+        <div class="countdown" id="countdown" aria-label="Countdown to the engagement">
+          <div class="count-box"><strong id="days">—</strong><span>Days</span></div>
+          <div class="count-box"><strong id="hours">—</strong><span>Hours</span></div>
+          <div class="count-box"><strong id="minutes">—</strong><span>Minutes</span></div>
+          <div class="count-box"><strong id="seconds">—</strong><span>Seconds</span></div>
+        </div>
+
+        <div class="ornament" aria-hidden="true" style="margin-top:28px">❦　✦　❦</div>
+        <p style="font-style:italic;color:var(--deep-gold);font-size:16px;">With the love and blessings of both our families</p>
+      </section>
+
+      <footer>Made with love for Kalyani &amp; Nandu · 25 November 2026</footer>
+    </div>
   </main>
 
   <script>
+    // Reveal Invitation Interaction
+    const openBtn = document.getElementById("openInvitationBtn");
+    const invitationContent = document.getElementById("invitationContent");
+    const heroSection = document.getElementById("heroSection");
+    const openHint = document.getElementById("openHint");
+
+    function triggerConfettiBurst() {
+      const symbols = ["🌸", "✦", "❀", "❦", "✨", "🏵️", "💛", "✧"];
+      const count = 28;
+      const rect = openBtn.getBoundingClientRect();
+      const originX = rect.left + rect.width / 2;
+      const originY = rect.top + rect.height / 2;
+
+      for (let i = 0; i < count; i++) {
+        const particle = document.createElement("div");
+        particle.className = "burst-particle";
+        particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        particle.style.left = originX + "px";
+        particle.style.top = originY + "px";
+
+        const angle = (i / count) * 2 * Math.PI + (Math.random() - 0.5) * 0.5;
+        const distance = 80 + Math.random() * 220;
+        const tx = Math.cos(angle) * distance + "px";
+        const ty = (Math.sin(angle) * distance - 40) + "px";
+        const rot = (Math.random() * 360) + "deg";
+
+        particle.style.setProperty("--tx", tx);
+        particle.style.setProperty("--ty", ty);
+        particle.style.setProperty("--rot", rot);
+
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 1900);
+      }
+    }
+
+    openBtn.addEventListener("click", () => {
+      // 1. Particle burst celebration
+      triggerConfettiBurst();
+
+      // 2. Reveal content
+      invitationContent.classList.add("show");
+      openBtn.setAttribute("aria-expanded", "true");
+      heroSection.classList.add("opened");
+
+      // Update button state
+      openBtn.style.animation = "none";
+      openBtn.innerHTML = '<span class="btn-icon">✓</span><span>Invitation Opened</span><span>↓</span>';
+      openHint.textContent = "Scroll down to view full ceremony card & venue";
+
+      // 3. Smooth scroll down to the invitation card
+      setTimeout(() => {
+        const posterWrap = document.getElementById("posterWrap");
+        if (posterWrap) {
+          posterWrap.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 350);
+    });
+
+    // Countdown Timer Logic
     const eventDate = new Date("2026-11-25T09:30:00+05:30");
     const pad = n => String(n).padStart(2, "0");
+
     function updateCountdown() {
-      let diff = eventDate.getTime() - Date.now();
+      const diff = eventDate.getTime() - Date.now();
       if (diff <= 0) {
         document.getElementById("countdown").innerHTML = "<p>The celebration day is here — wishing both families a beautiful occasion!</p>";
         return;
       }
-      const d = Math.floor(diff / 86400000); diff %= 86400000;
-      const h = Math.floor(diff / 3600000); diff %= 3600000;
-      const m = Math.floor(diff / 60000); diff %= 60000;
-      const s = Math.floor(diff / 1000);
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
       document.getElementById("days").textContent = d;
       document.getElementById("hours").textContent = pad(h);
       document.getElementById("minutes").textContent = pad(m);
@@ -120,50 +653,65 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
+    // Save Date (.ics file generation)
     document.getElementById("calendarBtn").addEventListener("click", () => {
       const ics = [
-        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Kalyani and Nandu//Engagement//EN",
-        "CALSCALE:GREGORIAN", "BEGIN:VEVENT", "UID:kalyani-nandu-engagement-20261125",
-        "DTSTAMP:20261023T000000Z", "DTSTART:20261125T040000Z", "DTEND:20261125T070000Z",
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Kalyani and Nandu//Engagement//EN",
+        "CALSCALE:GREGORIAN",
+        "BEGIN:VEVENT",
+        "UID:kalyani-nandu-engagement-20261125",
+        "DTSTAMP:20261023T000000Z",
+        "DTSTART:20261125T040000Z",
+        "DTEND:20261125T070000Z",
         "SUMMARY:Kalyani & Nandu — Engagement Ceremony",
         "LOCATION:Hotel Surya Grands, Vijayawada, Andhra Pradesh",
         "DESCRIPTION:Engagement ceremony. Venue map: https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic",
-        "END:VEVENT", "END:VCALENDAR"
-      ].join("\\r\\n");
-      const blob = new Blob([ics], {type:"text/calendar;charset=utf-8"});
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement("a"); a.href=url; a.download="Kalyani-Nandu-Engagement.ics";
-      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Kalyani-Nandu-Engagement.ics";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
     });
 
+    // Share on WhatsApp / Native Web Share
     document.getElementById("shareBtn").addEventListener("click", async () => {
       const shareData = {
-        title:"Kalyani & Nandu — Engagement Ceremony",
-        text:"You are warmly invited to Kalyani & Nandu's Engagement Ceremony on Wednesday, 25 November 2026 at 9:30 AM onwards at Hotel Surya Grands, Vijayawada.",
-        url:window.location.href
+        title: "Kalyani & Nandu — Engagement Ceremony",
+        text: "You are warmly invited to Kalyani & Nandu's Engagement Ceremony on Wednesday, 25 November 2026 at 9:30 AM onwards at Hotel Surya Grands, Vijayawada.\n\nOpen invitation card:",
+        url: window.location.href
       };
+
       if (navigator.share) {
-        try { await navigator.share(shareData); } catch (e) {}
-      } else if (navigator.clipboard && window.isSecureContext) {
         try {
-          await navigator.clipboard.writeText(shareData.text + "\\n" + window.location.href);
-          alert("Invitation link and details copied. You can paste them into WhatsApp.");
-        } catch (e) { alert("Copy the website address from your browser and share it on WhatsApp."); }
+          await navigator.share(shareData);
+        } catch (e) {}
       } else {
-        alert("Copy the website address from your browser and share it on WhatsApp.");
+        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
+        window.open(whatsappUrl, "_blank");
       }
     });
 
+    // Subtle Falling Petals Animation
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const symbols = ["✦","❀","✧"];
-      for (let i=0; i<9; i++) {
+      const symbols = ["✦", "❀", "✧", "🌸"];
+      for (let i = 0; i < 11; i++) {
         const petal = document.createElement("span");
         petal.className = "petal";
         petal.textContent = symbols[i % symbols.length];
-        petal.style.left = (Math.random()*100) + "vw";
-        petal.style.animationDuration = (13 + Math.random()*12) + "s";
-        petal.style.animationDelay = (-Math.random()*22) + "s";
-        petal.style.fontSize = (9 + Math.random()*9) + "px";
+        petal.style.left = (Math.random() * 100) + "vw";
+        petal.style.animationDuration = (12 + Math.random() * 10) + "s";
+        petal.style.animationDelay = (-Math.random() * 20) + "s";
+        petal.style.fontSize = (10 + Math.random() * 10) + "px";
         document.body.appendChild(petal);
       }
     }
