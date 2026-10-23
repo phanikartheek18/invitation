@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f0e2">
+  <meta name="description" content="A beautiful digital invitation for Kalyani and Nandu's engagement ceremony on 25 November 2026.">
+  <title>A Beautiful Beginning | Kalyani & Nandu</title>
+  <style>
+    :root {
+      --ivory:#fffaf1; --cream:#f4e8d3; --gold:#b38748; --deep-gold:#79572c;
+      --rose:#985c68; --ink:#3c3025; --muted:#80715f; --line:rgba(179,135,72,.3);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;
+      background:radial-gradient(ellipse at 15% 10%,rgba(216,180,123,.22),transparent 26rem),
+      radial-gradient(ellipse at 85% 70%,rgba(190,135,140,.12),transparent 28rem),
+      linear-gradient(145deg,#fffaf2,#f4e8d5 58%,#fff9ee);min-height:100vh}
+    .frame{position:fixed;inset:10px;border:1px solid rgba(179,135,72,.3);border-radius:20px;pointer-events:none;z-index:5}
+    .frame:before,.frame:after{content:"✦";position:absolute;left:50%;transform:translateX(-50%);background:#f8efdf;color:var(--gold);padding:0 10px;font-size:14px}
+    .frame:before{top:-9px}.frame:after{bottom:-9px}
+    .page{width:min(100% - 32px,900px);margin:auto;padding:38px 0 30px}
+    .hero{min-height:76vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:50px 16px 60px;position:relative;overflow:hidden}
+    .halo{position:absolute;width:min(76vw,440px);aspect-ratio:1;border:1px solid rgba(179,135,72,.23);border-radius:50%;box-shadow:0 0 0 18px rgba(179,135,72,.035),0 0 0 42px rgba(179,135,72,.025);pointer-events:none}
+    .topline{position:relative;font:700 10px/1.7 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--deep-gold)}
+    .symbol{position:relative;color:var(--gold);font-size:31px;margin:20px 0 13px}
+    h1{position:relative;font-size:clamp(44px,9vw,82px);font-weight:400;line-height:1.02;letter-spacing:-.045em;margin:0;color:var(--deep-gold)}
+    h1 span{font-size:.5em;color:var(--gold);font-style:italic;letter-spacing:0;padding:0 .12em}
+    .subtitle{position:relative;font:600 11px/1.6 Arial,sans-serif;text-transform:uppercase;letter-spacing:.32em;color:var(--rose);margin-top:17px}
+    .ornament{position:relative;color:var(--gold);letter-spacing:.45em;margin:23px 0}
+    .hero-copy{position:relative;max-width:460px;font-size:clamp(16px,2.5vw,19px);line-height:1.8;color:#655545;margin:0 auto 27px}
+    .open-btn,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s;font:600 12px Arial,sans-serif;letter-spacing:.04em}
+    .open-btn{position:relative;min-height:49px;padding:0 25px;color:#fff;background:linear-gradient(135deg,#bd985d,#80582c);border:1px solid #b18a4d;box-shadow:0 10px 24px rgba(121,87,44,.18)}
+    .open-btn:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(121,87,44,.18)}
+    .hint{position:relative;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#978570;margin-top:15px}
+    .invitation{scroll-margin-top:24px;text-align:center;padding:14px 0 30px}
+    .section-kicker{font:700 10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.24em;color:var(--deep-gold);margin:0 0 17px}
+    .poster-wrap{width:min(100%,570px);margin:0 auto;padding:9px;border:1px solid rgba(179,135,72,.42);border-radius:18px;background:rgba(255,253,247,.8);box-shadow:0 22px 60px rgba(79,47,13,.15)}
+    .poster{display:block;width:100%;height:auto;border-radius:10px}
+    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin:25px auto 12px}
+    .btn{min-height:46px;padding:12px 18px;border:1px solid var(--line);background:rgba(255,250,241,.82);color:var(--deep-gold)}
+    .btn-primary{background:linear-gradient(135deg,#bd985d,#80582c);color:white;border-color:#a98449}
+    .closing{text-align:center;padding:45px 10px 18px}
+    .closing .ornament{margin:0 0 17px}
+    .closing h2{font-size:clamp(25px,4.5vw,38px);font-weight:400;font-style:italic;color:var(--deep-gold);margin:0 0 12px}
+    .closing p{max-width:480px;margin:0 auto;color:var(--muted);line-height:1.7;font-size:15px}
+    .countdown{display:flex;justify-content:center;gap:9px;margin:25px auto 0}
+    .count-box{min-width:66px;padding:12px 8px 10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,250,241,.76)}
+    .count-box strong{display:block;font-size:23px;font-weight:400;color:var(--deep-gold);font-variant-numeric:tabular-nums}
+    .count-box span{display:block;margin-top:5px;font:9px Arial,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+    footer{text-align:center;color:#9a8b78;font:10px Arial,sans-serif;letter-spacing:.06em;padding:20px 10px 8px}
+    .petal{position:fixed;top:-20px;z-index:4;pointer-events:none;opacity:0;color:#c9a16c;animation:fall linear infinite}
+    @keyframes fall{0%{transform:translateY(-10vh) rotate(0deg);opacity:0}10%{opacity:.5}90%{opacity:.4}100%{transform:translateY(110vh) rotate(330deg);opacity:0}}
+    @media(max-width:560px){.page{width:min(100% - 26px,900px);padding-top:24px}.hero{min-height:72vh;padding:40px 9px 45px}.frame{inset:6px;border-radius:15px}.actions{gap:8px}.btn{width:100%;max-width:290px}.countdown{gap:6px}.count-box{min-width:58px;padding:10px 5px}.count-box strong{font-size:20px}.topline{font-size:9px;letter-spacing:.2em}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="frame" aria-hidden="true"></div>
+  <main class="page">
+    <section class="hero" aria-label="Welcome">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="topline">With the blessings of the Almighty</div>
+      <div class="symbol" aria-hidden="true">ॐ</div>
+      <h1>Kalyani <span>&amp;</span> Nandu</h1>
+      <div class="subtitle">Engagement Ceremony</div>
+      <div class="ornament" aria-hidden="true">❦　✦　❦</div>
+      <p class="hero-copy">Two families, one beautiful beginning.<br>We would be delighted to celebrate this special moment with you.</p>
+      <a class="open-btn" href="#invitation">✧ &nbsp; Open Invitation &nbsp; ↓</a>
+      <div class="hint">A celebration of love, family &amp; new beginnings</div>
+    </section>
+
+    <section class="invitation" id="invitation" aria-label="Invitation card">
+      <p class="section-kicker">A heartfelt invitation to you</p>
+      <div class="poster-wrap">
+        <img class="poster" src="engagement-invitation.png" alt="Kalyani and Nandu's engagement invitation card with event details">
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic" target="_blank" rel="noopener noreferrer">⌖ &nbsp; Explore Venue</a>
+        <button class="btn" id="calendarBtn" type="button">＋ &nbsp; Save the Date</button>
+        <button class="btn" id="shareBtn" type="button">↗ &nbsp; Share with Family</button>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="Countdown">
+      <div class="ornament" aria-hidden="true">✦　❦　✦</div>
+      <h2>The countdown to a beautiful day</h2>
+      <p>Wednesday, 25 November 2026 · 9:30 AM onwards<br>Hotel Surya Grands, Vijayawada</p>
+      <div class="countdown" id="countdown" aria-label="Countdown to the engagement">
+        <div class="count-box"><strong id="days">—</strong><span>Days</span></div>
+        <div class="count-box"><strong id="hours">—</strong><span>Hours</span></div>
+        <div class="count-box"><strong id="minutes">—</strong><span>Minutes</span></div>
+        <div class="count-box"><strong id="seconds">—</strong><span>Seconds</span></div>
+      </div>
+      <div class="ornament" aria-hidden="true" style="margin-top:28px">❦　✦　❦</div>
+      <p style="font-style:italic;color:var(--deep-gold)">With the love and blessings of our families</p>
+    </section>
+    <footer>Made with love for Kalyani &amp; Nandu · 25 November 2026</footer>
+  </main>
+
+  <script>
+    const eventDate = new Date("2026-11-25T09:30:00+05:30");
+    const pad = n => String(n).padStart(2, "0");
+    function updateCountdown() {
+      let diff = eventDate.getTime() - Date.now();
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "<p>The celebration day is here — wishing both families a beautiful occasion!</p>";
+        return;
+      }
+      const d = Math.floor(diff / 86400000); diff %= 86400000;
+      const h = Math.floor(diff / 3600000); diff %= 3600000;
+      const m = Math.floor(diff / 60000); diff %= 60000;
+      const s = Math.floor(diff / 1000);
+      document.getElementById("days").textContent = d;
+      document.getElementById("hours").textContent = pad(h);
+      document.getElementById("minutes").textContent = pad(m);
+      document.getElementById("seconds").textContent = pad(s);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    document.getElementById("calendarBtn").addEventListener("click", () => {
+      const ics = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Kalyani and Nandu//Engagement//EN",
+        "CALSCALE:GREGORIAN", "BEGIN:VEVENT", "UID:kalyani-nandu-engagement-20261125",
+        "DTSTAMP:20261023T000000Z", "DTSTART:20261125T040000Z", "DTEND:20261125T070000Z",
+        "SUMMARY:Kalyani & Nandu — Engagement Ceremony",
+        "LOCATION:Hotel Surya Grands, Vijayawada, Andhra Pradesh",
+        "DESCRIPTION:Engagement ceremony. Venue map: https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic",
+        "END:VEVENT", "END:VCALENDAR"
+      ].join("\\r\\n");
+      const blob = new Blob([ics], {type:"text/calendar;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a"); a.href=url; a.download="Kalyani-Nandu-Engagement.ics";
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    document.getElementById("shareBtn").addEventListener("click", async () => {
+      const shareData = {
+        title:"Kalyani & Nandu — Engagement Ceremony",
+        text:"You are warmly invited to Kalyani & Nandu's Engagement Ceremony on Wednesday, 25 November 2026 at 9:30 AM onwards at Hotel Surya Grands, Vijayawada.",
+        url:window.location.href
+      };
+      if (navigator.share) {
+        try { await navigator.share(shareData); } catch (e) {}
+      } else if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(shareData.text + "\\n" + window.location.href);
+          alert("Invitation link and details copied. You can paste them into WhatsApp.");
+        } catch (e) { alert("Copy the website address from your browser and share it on WhatsApp."); }
+      } else {
+        alert("Copy the website address from your browser and share it on WhatsApp.");
+      }
+    });
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const symbols = ["✦","❀","✧"];
+      for (let i=0; i<9; i++) {
+        const petal = document.createElement("span");
+        petal.className = "petal";
+        petal.textContent = symbols[i % symbols.length];
+        petal.style.left = (Math.random()*100) + "vw";
+        petal.style.animationDuration = (13 + Math.random()*12) + "s";
+        petal.style.animationDelay = (-Math.random()*22) + "s";
+        petal.style.fontSize = (9 + Math.random()*9) + "px";
+        document.body.appendChild(petal);
+      }
+    }
+  </script>
+</body>
+</html>
