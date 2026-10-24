@@ -2,642 +2,2194 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f0e2">
-  <meta name="description" content="A beautiful digital invitation for Kalyani and Nandu's engagement ceremony on 25 November 2026.">
-  <title>Kalyani &amp; Nandu — Engagement Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="Kalyani &amp; Nandu — Official Engagement Invitation · Wednesday, 25 November 2026 at Hotel Surya Grands, Vijayawada.">
+  <title>Kalyani &amp; Nandu — The Royal Engagement</title>
   
   <!-- Premium Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Italiana&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --ivory: #fffaf1;
-      --cream: #f4e8d3;
-      --gold: #b38748;
-      --gold-light: #d8b87d;
-      --deep-gold: #79572c;
-      --rose: #985c68;
-      --ink: #3c3025;
-      --muted: #7b6d5c;
-      --line: rgba(179, 135, 72, 0.32);
-      --card-bg: rgba(255, 253, 247, 0.94);
+      --bg: #09090d;
+      --bg-card: rgba(18, 18, 25, 0.72);
+      --bg-card-hover: rgba(26, 26, 36, 0.85);
+      --champagne-light: #fef0db;
+      --champagne: #e8caa4;
+      --champagne-gold: #cfa874;
+      --gold-300: #f5c46b;
+      --gold-400: #d99b38;
+      --gold-500: #aa701d;
+      --gold-gradient: linear-gradient(135deg, #fff5db 0%, #f5c46b 35%, #aa701d 70%, #ffe3a3 100%);
+      --gold-metal-shine: linear-gradient(110deg, #d99b38 0%, #fff5db 28%, #aa701d 50%, #ffe3a3 75%, #6e440c 100%);
+      --gold-border: rgba(232, 202, 164, 0.24);
+      --gold-border-bright: rgba(232, 202, 164, 0.6);
+      --glow-gold: rgba(245, 196, 107, 0.45);
+      --glow-gold-intense: rgba(255, 227, 163, 0.75);
+      --text-muted: #8c8c99;
+      --text-soft: #d8d8e3;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    html {
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      overflow-x: hidden;
       scroll-behavior: smooth;
     }
 
-    body {
-      color: var(--ink);
-      font-family: 'Playfair Display', Georgia, serif;
-      background:
-        radial-gradient(ellipse at 15% 10%, rgba(216, 180, 123, 0.28), transparent 28rem),
-        radial-gradient(ellipse at 85% 70%, rgba(190, 135, 140, 0.16), transparent 30rem),
-        linear-gradient(145deg, #fffaf2, #f5e9d6 55%, #fff8ec);
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Royal Frame */
-    .frame {
+    /* Ambient Background Mesh - Rich Royal Velvet & Palace Gold Depth */
+    .ambient-mesh {
       position: fixed;
-      inset: 12px;
-      border: 1px solid rgba(179, 135, 72, 0.38);
-      border-radius: 20px;
+      inset: 0;
       pointer-events: none;
-      z-index: 50;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+      z-index: 1;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(245, 196, 107, 0.24) 0%, rgba(138, 25, 50, 0.16) 38%, transparent 68%),
+        radial-gradient(circle at 12% 40%, rgba(207, 168, 116, 0.18) 0%, transparent 48%),
+        radial-gradient(circle at 88% 55%, rgba(217, 155, 56, 0.20) 0%, transparent 50%),
+        radial-gradient(circle at 50% 85%, rgba(110, 15, 35, 0.22) 0%, transparent 60%),
+        linear-gradient(180deg, #07070b 0%, #0e0a14 50%, #060609 100%);
     }
-    .frame:before, .frame:after {
-      content: "✦";
-      position: absolute;
+
+    /* Royal Sacred Rotating Mandala Watermark */
+    .royal-mandala-backdrop {
+      position: fixed;
+      top: 42%;
       left: 50%;
-      transform: translateX(-50%);
-      background: #f8efdf;
-      color: var(--gold);
-      padding: 0 12px;
-      font-size: 15px;
+      transform: translate(-50%, -50%);
+      width: min(850px, 92vw);
+      height: min(850px, 92vw);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.16;
+      animation: slowMandalaSpin 140s linear infinite;
+      transform-origin: center center;
+      mask-image: radial-gradient(circle, black 32%, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle, black 32%, transparent 72%);
     }
-    .frame:before { top: -10px; }
-    .frame:after { bottom: -10px; }
+    @keyframes slowMandalaSpin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
 
-    .page {
-      width: min(100% - 32px, 860px);
-      margin: auto;
-      padding: 20px 0 40px;
+    /* Royal Gold Corner Filigree Toranam */
+    .royal-corner {
+      position: fixed;
+      width: 140px;
+      height: 140px;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.28;
+    }
+    .royal-corner-tl { top: 0; left: 0; }
+    .royal-corner-tr { top: 0; right: 0; transform: scaleX(-1); }
+
+    #particlesCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.95;
+    }
+
+    /* ==========================================================================
+       ACT 1: GRAND ROYAL VELVET CURTAINS REVEAL
+       ========================================================================== */
+    .curtain-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: flex;
+      pointer-events: auto;
+      transition: visibility 1.8s ease;
+    }
+    .curtain-overlay.opened {
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .curtain-panel {
       position: relative;
-      z-index: 10;
+      width: 50%;
+      height: 100%;
+      background:
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0px, rgba(0, 0, 0, 0.05) 25px, rgba(0, 0, 0, 0.4) 50px),
+        linear-gradient(135deg, #500817, #24020a 75%, #180106);
+      box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.95);
+      transition: transform 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+      overflow: hidden;
+    }
+    .curtain-left {
+      border-right: 2px solid var(--gold-400);
+      transform-origin: left center;
+    }
+    .curtain-right {
+      border-left: 2px solid var(--gold-400);
+      transform-origin: right center;
+    }
+    .curtain-left::after, .curtain-right::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 14px;
+      background: repeating-linear-gradient(180deg, var(--gold-300) 0px, var(--gold-500) 8px, #3a0610 16px);
+      box-shadow: 0 0 15px rgba(217, 155, 56, 0.5);
+    }
+    .curtain-left::after { right: 0; }
+    .curtain-right::after { left: 0; }
+
+    .curtain-overlay.opened .curtain-left {
+      transform: translateX(-105%) rotateY(-10deg);
+    }
+    .curtain-overlay.opened .curtain-right {
+      transform: translateX(105%) rotateY(10deg);
     }
 
-    /* Full-Screen Cover / Hero Screen */
-    .hero {
-      min-height: 92vh;
-      min-height: 92dvh;
+    /* Center Medallion Seal */
+    .curtain-seal-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      text-align: center;
+      width: min(92vw, 360px);
+    }
+    .curtain-overlay.opened .curtain-seal-wrap {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.7);
+      pointer-events: none;
+    }
+
+    .curtain-seal {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #7a1027, #26030c);
+      border: 3px solid var(--gold-300);
+      box-shadow: 0 0 40px var(--glow-gold-intense), 0 20px 50px rgba(0, 0, 0, 0.95), inset 0 2px 6px rgba(255, 255, 255, 0.4);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 40px 20px 50px;
       position: relative;
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: sealBreathing 2.8s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+    @keyframes sealBreathing {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 40px var(--glow-gold-intense), 0 20px 50px rgba(0, 0, 0, 0.95); }
+      50% { transform: scale(1.08); box-shadow: 0 0 60px rgba(255, 227, 163, 0.95), 0 25px 60px rgba(0, 0, 0, 0.98); }
+    }
+    .curtain-seal:hover {
+      transform: scale(1.12);
     }
 
-    .hero.opened {
-      min-height: auto;
-      padding: 30px 20px 20px;
+    .seal-om {
+      font-size: 26px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 8px var(--gold-200));
+    }
+    .seal-monogram {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--champagne-light);
+      text-shadow: 0 2px 8px #000;
+      margin: 2px 0;
+    }
+    .seal-subtext {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-300);
     }
 
-    .halo {
+    .seal-halo {
       position: absolute;
-      width: min(84vw, 480px);
-      aspect-ratio: 1;
-      border: 1px solid rgba(179, 135, 72, 0.25);
+      inset: -14px;
+      border: 1px dashed var(--gold-300);
       border-radius: 50%;
-      box-shadow: 0 0 0 20px rgba(179, 135, 72, 0.04), 0 0 0 45px rgba(179, 135, 72, 0.025);
-      pointer-events: none;
-      animation: rotateSlow 40s linear infinite;
+      animation: rotateRing 20s linear infinite;
     }
-
-    @keyframes rotateSlow {
+    @keyframes rotateRing {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
-    .topline {
+    /* Royal "Open Invitation" Button */
+    .open-invitation-btn {
+      margin-top: 28px;
       position: relative;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--deep-gold);
-      margin-bottom: 4px;
-    }
-
-    .symbol {
-      position: relative;
-      color: var(--gold);
-      font-size: 34px;
-      margin: 16px 0 10px;
-      text-shadow: 0 0 16px rgba(179, 135, 72, 0.3);
-      animation: pulseGlow 3s ease-in-out infinite;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); opacity: 0.95; }
-      50% { transform: scale(1.08); opacity: 1; text-shadow: 0 0 22px rgba(179, 135, 72, 0.55); }
-    }
-
-    h1 {
-      position: relative;
-      font-family: 'Cinzel', 'Playfair Display', serif;
-      font-size: clamp(38px, 8.5vw, 76px);
-      font-weight: 600;
-      line-height: 1.05;
-      letter-spacing: 0.02em;
-      margin: 4px 0 10px;
-      color: var(--deep-gold);
-      text-shadow: 0 2px 8px rgba(121, 87, 44, 0.12);
-    }
-
-    h1 span {
-      font-family: 'Great Vibes', cursive;
-      font-size: 0.68em;
-      color: var(--gold);
-      font-weight: 400;
-      padding: 0 0.15em;
-      vertical-align: middle;
-    }
-
-    .subtitle {
-      position: relative;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-      font-weight: 600;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.36em;
-      color: var(--rose);
-      margin-top: 10px;
-    }
-
-    .ornament {
-      position: relative;
-      color: var(--gold);
-      letter-spacing: 0.45em;
-      margin: 18px 0;
-      font-size: 15px;
-    }
-
-    .hero-copy {
-      position: relative;
-      max-width: 480px;
-      font-size: clamp(16px, 2.4vw, 19px);
-      line-height: 1.8;
-      color: #5c4e3f;
-      margin: 0 auto 30px;
-      font-style: italic;
-    }
-
-    /* Royal Open Button with Envelope Charm */
-    .open-btn-container {
-      position: relative;
-      margin-top: 5px;
-    }
-
-    .open-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 14px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #fff3cf 0%, #f7cb72 26%, #ca8a24 55%, #dfa53c 80%, #fff1ce 100%);
+      color: #2a0812;
+      border: 2px solid rgba(255, 245, 215, 0.95);
       border-radius: 999px;
-      text-decoration: none;
       cursor: pointer;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      min-height: 54px;
-      padding: 0 34px;
-      color: #fff;
-      background: linear-gradient(135deg, #c79e60, #7d5225);
-      border: 1px solid #dfbb7d;
-      box-shadow: 0 12px 28px rgba(121, 87, 44, 0.28), 0 0 0 4px rgba(179, 135, 72, 0.18);
-      transition: all 0.3s ease;
-      animation: buttonPulse 2.4s ease-in-out infinite;
+      box-shadow: 0 0 38px rgba(245, 196, 107, 0.65), 0 16px 36px rgba(0, 0, 0, 0.85), inset 0 2px 4px rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      overflow: hidden;
+      animation: btnPulseGlow 2.4s ease-in-out infinite;
+      user-select: none;
     }
 
-    @keyframes buttonPulse {
+    .open-invitation-btn:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 0 55px rgba(245, 196, 107, 0.95), 0 22px 45px rgba(0, 0, 0, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.95);
+    }
+
+    .open-invitation-btn:active {
+      transform: scale(0.97);
+    }
+
+    .open-invitation-btn .btn-shine {
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 45%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+      transform: rotate(25deg);
+      animation: shinePass 3.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shinePass {
+      0% { left: -70%; }
+      30%, 100% { left: 140%; }
+    }
+
+    @keyframes btnPulseGlow {
       0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 12px 28px rgba(121, 87, 44, 0.28), 0 0 0 4px rgba(179, 135, 72, 0.18);
+        box-shadow: 0 0 32px rgba(245, 196, 107, 0.55), 0 16px 36px rgba(0, 0, 0, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.7);
       }
       50% {
-        transform: scale(1.04);
-        box-shadow: 0 16px 36px rgba(121, 87, 44, 0.38), 0 0 0 7px rgba(179, 135, 72, 0.25);
+        box-shadow: 0 0 52px rgba(255, 227, 163, 0.9), 0 20px 42px rgba(0, 0, 0, 0.85), inset 0 2px 6px rgba(255, 255, 255, 0.9);
       }
     }
 
-    .open-btn:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 16px 36px rgba(121, 87, 44, 0.35), 0 0 0 6px rgba(179, 135, 72, 0.24);
-      background: linear-gradient(135deg, #d3ab6d, #8d5d2b);
-    }
-
-    .open-btn .btn-icon {
+    .open-invitation-btn .btn-icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #5b0d1e, #29040c);
+      border: 1.5px solid #ffe3a3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      flex-shrink: 0;
     }
 
-    .hint {
-      position: relative;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.16em;
+    .open-invitation-btn .btn-title {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #27040b;
+      line-height: 1;
       text-transform: uppercase;
-      color: #8f7d6a;
-      margin-top: 18px;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+      white-space: nowrap;
     }
 
-    /* Invitation Content Section (Initially Hidden!) */
-    #invitationContent {
-      display: none;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    .open-invitation-btn .btn-arrow-icon {
+      font-size: 15px;
+      color: #3f0914;
+      font-weight: 900;
+      margin-left: 2px;
+      transition: transform 0.25s ease;
     }
 
-    #invitationContent.show {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
+    .open-invitation-btn:hover .btn-arrow-icon {
+      transform: translateX(4px);
     }
 
-    .invitation {
-      scroll-margin-top: 30px;
-      text-align: center;
-      padding: 10px 0 25px;
+    /* Top Bar: Minimal Logo + Audio Equalizer */
+    .top-nav {
+      position: fixed;
+      top: 18px;
+      left: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
     }
 
-    .section-kicker {
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    .brand-mark {
+      pointer-events: auto;
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
       font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--champagne);
+      background: rgba(14, 14, 20, 0.85);
+      border: 1px solid var(--gold-border);
+      padding: 7px 16px;
+      border-radius: 999px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .audio-pill {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(14, 14, 20, 0.9);
+      border: 1px solid var(--gold-border);
+      backdrop-filter: blur(14px);
+      cursor: pointer;
+      color: var(--champagne);
       font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.28em;
-      color: var(--deep-gold);
-      margin: 0 0 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transition: all 0.25s ease;
+    }
+    .audio-pill:hover {
+      border-color: var(--champagne);
+      transform: translateY(-1px);
+    }
+    .audio-pill.playing {
+      border-color: var(--gold-300);
+      background: rgba(28, 22, 14, 0.95);
+      color: #fff;
+      box-shadow: 0 0 22px rgba(245, 196, 107, 0.4), 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+    .equalizer-bars {
+      display: flex;
+      align-items: center;
+      gap: 2.5px;
+      height: 12px;
+    }
+    .eq-bar {
+      width: 2.5px;
+      height: 100%;
+      background: var(--gold-300);
+      border-radius: 2px;
+      transform-origin: bottom;
+    }
+    .audio-pill.playing .eq-bar:nth-child(1) { animation: eqBounce 0.7s ease-in-out infinite alternate; }
+    .audio-pill.playing .eq-bar:nth-child(2) { animation: eqBounce 1.0s ease-in-out infinite alternate 0.2s; }
+    .audio-pill.playing .eq-bar:nth-child(3) { animation: eqBounce 0.85s ease-in-out infinite alternate 0.4s; }
+    @keyframes eqBounce {
+      0% { transform: scaleY(0.2); }
+      100% { transform: scaleY(1); }
     }
 
-    .poster-wrap {
-      width: min(100%, 580px);
-      margin: 0 auto;
-      padding: 10px;
-      border: 1px solid rgba(179, 135, 72, 0.45);
-      border-radius: 20px;
-      background: var(--card-bg);
-      box-shadow: 0 25px 65px rgba(79, 47, 13, 0.18), 0 4px 18px rgba(179, 135, 72, 0.12);
-      transition: transform 0.3s ease;
+    .anime-song-badge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+      padding: 10px 18px;
+      background: rgba(22, 18, 28, 0.9);
+      border: 1px solid var(--gold-border);
+      border-radius: 999px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+    .anime-song-text {
+      font-size: 11px;
+      color: var(--text-soft);
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .anime-song-text strong {
+      color: var(--gold-300);
+      font-weight: 700;
+    }
+    .anime-music-play-btn {
+      background: linear-gradient(135deg, #fff5db, #d99b38);
+      color: #1a1205;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 999px;
+      padding: 6px 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(207, 168, 116, 0.35);
+    }
+    .anime-music-play-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(245, 196, 107, 0.55);
+    }
+
+    /* Main App Layout */
+    .app-scroller {
       position: relative;
+      z-index: 10;
+      width: 100%;
+      padding-bottom: 120px;
     }
 
-    .poster-wrap:hover {
-      transform: translateY(-2px);
+    .section-wrap {
+      width: min(100% - 32px, 720px);
+      margin: 0 auto 70px;
+      padding-top: 50px;
+      scroll-margin-top: 30px;
     }
 
-    .poster {
+    /* Hero Section */
+    .hero-box {
+      text-align: center;
+      padding-top: 30px;
+      margin-bottom: 35px;
+    }
+
+    .shloka-eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--champagne);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .shloka-eyebrow::before, .shloka-eyebrow::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--gold-border);
+    }
+
+    .title-names {
+      font-family: 'Italiana', 'Cinzel', Georgia, serif;
+      font-size: clamp(48px, 9vw, 84px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      color: #fff;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+    }
+    .title-names .amp {
+      font-family: 'Great Vibes', cursive;
+      color: var(--champagne);
+      font-size: 0.8em;
+      margin: 0 4px;
+    }
+
+    .event-type {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #ffb8c5;
+      margin-bottom: 22px;
+    }
+
+    .hero-narrative {
+      font-size: clamp(16px, 2.5vw, 19px);
+      line-height: 1.8;
+      color: var(--text-soft);
+      max-width: 540px;
+      margin: 0 auto 35px;
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       ACT 2: 3D HOLOGRAPHIC GOLD FOIL TILT INVITATION POSTER
+       ========================================================================== */
+    .stage-3d {
+      position: relative;
+      perspective: 1400px;
+      width: min(100%, 590px);
+      margin: 0 auto 28px;
+    }
+    /* Radiant Golden Ambient Backlight */
+    .stage-3d::before {
+      content: "";
+      position: absolute;
+      inset: -25px -40px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(245, 196, 107, 0.35) 0%, rgba(180, 45, 75, 0.22) 50%, transparent 75%);
+      filter: blur(40px);
+      border-radius: 50px;
+      pointer-events: none;
+      z-index: 0;
+      animation: ambientGlowBloom 6s ease-in-out infinite alternate;
+    }
+    @keyframes ambientGlowBloom {
+      0% { opacity: 0.65; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1.04); }
+    }
+
+    .card-3d-wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-radius: 24px;
+      padding: 13px;
+      background: linear-gradient(145deg, #440816, #1b0207);
+      box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.95),
+        0 0 45px var(--glow-gold),
+        inset 0 0 30px rgba(245, 196, 107, 0.15);
+      border: 2px solid transparent;
+      border-image: var(--gold-gradient) 1;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card-3d-wrap:hover {
+      box-shadow:
+        0 40px 110px rgba(0, 0, 0, 0.98),
+        0 0 65px rgba(255, 227, 163, 0.65),
+        inset 0 0 40px rgba(245, 196, 107, 0.25);
+    }
+
+    .hologram-glare {
+      position: absolute;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.28) 0%, rgba(245, 196, 107, 0.15) 25%, transparent 60%);
+      pointer-events: none;
+      z-index: 5;
+      mix-blend-mode: overlay;
+    }
+
+    .poster-media {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      border-radius: 14px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 2;
     }
 
-    .actions {
+    .tilt-notice {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--champagne);
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Action Buttons Cluster - Refined & High-Contrast */
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 30px;
+      width: min(100%, 640px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      cursor: pointer;
+      color: #fff;
+      background: rgba(26, 26, 36, 0.88);
+      border: 1px solid var(--gold-border);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(207, 168, 116, 0.12);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill:hover {
+      transform: translateY(-2px);
+      background: rgba(40, 40, 56, 0.95);
+      border-color: var(--champagne);
+      color: var(--champagne-light);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 22px rgba(232, 202, 164, 0.28);
+    }
+    .btn-pill-gold {
+      background: linear-gradient(135deg, #fef0db 0%, #cfa874 100%);
+      color: #120e09;
+      border: 1px solid #fff;
+      font-weight: 800;
+      box-shadow: 0 12px 32px rgba(207, 168, 116, 0.35);
+    }
+    .btn-pill-gold:hover {
+      background: linear-gradient(135deg, #fff7eb 0%, #ddb885 100%);
+      color: #000;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(207, 168, 116, 0.55);
+    }
+
+    /* ==========================================================================
+       LUXURY BENTO GRID & DASHBOARD CARDS
+       ========================================================================== */
+    .bento-container {
+      width: min(100% - 32px, 1120px);
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+      scroll-margin-top: 30px;
+    }
+    @media (min-width: 920px) {
+      .bento-container {
+        grid-template-columns: 1.12fr 1fr;
+        gap: 28px;
+      }
+    }
+    .bento-card {
+      scroll-margin-top: 50px;
+      position: relative;
+    }
+    .bento-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: space-between;
+    }
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--champagne-light);
+      background: rgba(207, 168, 116, 0.15);
+      border: 1px solid rgba(232, 202, 164, 0.35);
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* SECTION 2: CEREMONY TIMELINE */
+    .timeline-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: radial-gradient(circle at 50% 0%, rgba(45, 12, 22, 0.85), rgba(18, 18, 25, 0.94));
+      border: 1px solid rgba(232, 202, 164, 0.32);
+      border-radius: 24px;
+      padding: 34px 28px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.7), 0 0 30px rgba(207, 168, 116, 0.12);
+      text-align: center;
+    }
+    .section-headline {
+      font-family: 'Italiana', 'Cinzel', serif;
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .section-subhead {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .timeline-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    .timeline-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(14, 14, 20, 0.75);
+      border: 1px solid rgba(232, 202, 164, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+    .timeline-card:hover {
+      background: rgba(28, 28, 40, 0.9);
+      border-color: var(--champagne);
+      transform: translateX(4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(232, 202, 164, 0.18);
+    }
+    .time-badge {
+      min-width: 88px;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(207, 168, 116, 0.25), rgba(140, 20, 45, 0.2));
+      border: 1px solid var(--champagne);
+      font-family: 'Cinzel', serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--champagne-light);
+      text-shadow: 0 0 10px rgba(245, 196, 107, 0.5);
+    }
+    .event-info strong {
+      display: block;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 3px;
+      letter-spacing: 0.01em;
+    }
+    .event-info span {
+      display: block;
+      font-size: 13px;
+      color: #c0c0cf;
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       ROYAL ANIME COUPLE - WALKING & RING EXCHANGE ANIMATED STAGE
+       ========================================================================== */
+    .anime-exchange-stage {
+      position: relative;
+      width: 100%;
+      height: 270px;
+      margin: 14px 0 10px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(232, 202, 164, 0.45);
+      background: radial-gradient(ellipse at 50% 100%, rgba(140, 20, 50, 0.55) 0%, rgba(20, 14, 25, 0.98) 75%),
+                  linear-gradient(180deg, #120e18 0%, #1c0e18 100%);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.8), 0 0 30px rgba(207, 168, 116, 0.18);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .anime-exchange-stage:hover {
+      border-color: var(--champagne);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(232, 202, 164, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Romantic Palace Garden Background with Fairy Lights */
+    .anime-stage-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(245, 196, 107, 0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .anime-fairy-lights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 35px;
+      background: radial-gradient(circle at 10% 8px, #ffe082 3px, transparent 4px),
+                  radial-gradient(circle at 25% 14px, #ff80ab 3px, transparent 4px),
+                  radial-gradient(circle at 40% 6px, #ffffff 3px, transparent 4px),
+                  radial-gradient(circle at 55% 12px, #ffe082 3px, transparent 4px),
+                  radial-gradient(circle at 70% 8px, #ff80ab 3px, transparent 4px),
+                  radial-gradient(circle at 85% 14px, #ffffff 3px, transparent 4px);
+      background-size: 80px 30px;
+      opacity: 0.85;
+      pointer-events: none;
+      animation: fairyTwinkle 3s ease-in-out infinite alternate;
+    }
+    @keyframes fairyTwinkle {
+      0% { opacity: 0.6; filter: drop-shadow(0 0 4px #ffe082); }
+      100% { opacity: 1; filter: drop-shadow(0 0 10px #ffe082); }
+    }
+
+    /* Red Carpet illuminated Aisle */
+    .anime-stage-floor {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 52px;
+      background: linear-gradient(180deg, transparent 0%, rgba(199, 44, 88, 0.3) 45%, rgba(207, 168, 116, 0.32) 100%);
+      border-top: 1px dashed rgba(232, 202, 164, 0.3);
+    }
+    .anime-center-spotlight {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      height: 42px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(245, 196, 107, 0.6) 0%, transparent 75%);
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    /* Walking Character Actors */
+    .anime-actor-wrap {
+      position: absolute;
+      bottom: 22px;
+      height: 180px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .anime-actor-img {
+      height: 180px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.7));
+      animation: animeWalkBob 8.5s ease-in-out infinite;
+    }
+
+    /* Groom Walk Path */
+    .anime-groom-wrap {
+      left: -20px;
+      animation: animeGroomWalk 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes animeGroomWalk {
+      0% { left: -30px; opacity: 0; }
+      8% { opacity: 1; }
+      32% { left: calc(50% - 105px); }
+      76% { left: calc(50% - 105px); }
+      82% { left: calc(50% - 98px); }
+      90% { left: calc(50% - 105px); opacity: 1; }
+      98% { left: -30px; opacity: 0; }
+      100% { left: -30px; opacity: 0; }
+    }
+
+    /* Bride Walk Path */
+    .anime-bride-wrap {
+      right: -20px;
+      animation: animeBrideWalk 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes animeBrideWalk {
+      0% { right: -30px; opacity: 0; }
+      8% { opacity: 1; }
+      32% { right: calc(50% - 105px); }
+      76% { right: calc(50% - 105px); }
+      82% { right: calc(50% - 98px); }
+      90% { right: calc(50% - 105px); opacity: 1; }
+      98% { right: -30px; opacity: 0; }
+      100% { right: -30px; opacity: 0; }
+    }
+
+    /* Natural anime walking step bobbing */
+    @keyframes animeWalkBob {
+      0% { transform: translateY(0); }
+      4%, 12%, 20%, 28% { transform: translateY(-7px); }
+      8%, 16%, 24%, 32% { transform: translateY(0); }
+      33%, 78% { transform: translateY(0); }
+      82% { transform: translateY(-3px) scale(1.02); }
+      86%, 90% { transform: translateY(0); }
+      94% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Sparkling Ring Burst where hands meet in the center */
+    .anime-ring-climax {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      pointer-events: none;
+      animation: animeRingBurst 8.5s ease-in-out infinite;
+    }
+    @keyframes animeRingBurst {
+      0%, 31% { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+      36% { opacity: 1; transform: translate(-50%, -50%) scale(1.5); }
+      42% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.15); }
+      68% { opacity: 1; transform: translate(-50%, -50%) scale(1.4); }
+      77% { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
+      100% { opacity: 0; }
+    }
+    .ring-star-flare {
+      font-size: 28px;
+      display: block;
+      filter: drop-shadow(0 0 14px #ffe57f) drop-shadow(0 0 25px #ff9800);
+      animation: ringFlareSpin 3.5s linear infinite;
+    }
+    @keyframes ringFlareSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Floating Hearts and Petals rising when they exchange rings */
+    .anime-floating-hearts {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 100px;
+      pointer-events: none;
+      z-index: 8;
+    }
+    .anime-heart {
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      font-size: 17px;
+      animation: animeHeartRise 8.5s ease-in-out infinite;
+    }
+    .ah1 { left: 20%; --hdx: -22px; animation-delay: 0.2s; }
+    .ah2 { left: 50%; --hdx: 0px; font-size: 22px; animation-delay: 0.6s; }
+    .ah3 { left: 80%; --hdx: 22px; animation-delay: 1.1s; }
+
+    @keyframes animeHeartRise {
+      0%, 33% { opacity: 0; transform: translate(-50%, 0) scale(0.3); }
+      38% { opacity: 1; transform: translate(calc(-50% + var(--hdx) * 0.4), -30px) scale(1); }
+      58% { opacity: 0.95; transform: translate(calc(-50% + var(--hdx)), -65px) scale(1.25); }
+      76% { opacity: 0; transform: translate(calc(-50% + var(--hdx) * 1.5), -95px) scale(1.4); }
+      100% { opacity: 0; }
+    }
+
+    /* Elegant Status Caption Bar */
+    .anime-stage-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(14, 12, 20, 0.88);
+      border: 1px solid rgba(232, 202, 164, 0.4);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--champagne-light);
+      letter-spacing: 0.03em;
+      z-index: 15;
+    }
+    .anime-badge-tag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .anime-replay-btn {
+      font-size: 11px;
+      color: #ffd885;
+      font-weight: 700;
+      background: rgba(207, 168, 116, 0.2);
+      border: 1px solid rgba(232, 202, 164, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+    .anime-exchange-stage:hover .anime-replay-btn {
+      background: linear-gradient(135deg, #fef0db 0%, #cfa874 100%);
+      color: #120e09;
+    }
+
+    /* Tap Burst Particle */
+    .ring-burst-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      font-size: 20px;
+      animation: ringBurstAnim 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      filter: drop-shadow(0 0 10px rgba(245, 196, 107, 0.9));
+    }
+    @keyframes ringBurstAnim {
+      0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+      100% { transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1.4); opacity: 0; }
+    }
+
+    @media (min-width: 992px) {
+      .app-scroller::before, .app-scroller::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 140px;
+        pointer-events: none;
+        z-index: 3;
+      }
+      .app-scroller::before {
+        left: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%),
+                    radial-gradient(ellipse at 0% 40%, rgba(207, 168, 116, 0.12) 0%, transparent 70%);
+      }
+      .app-scroller::after {
+        right: 0;
+        background: linear-gradient(-90deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%),
+                    radial-gradient(ellipse at 100% 40%, rgba(207, 168, 116, 0.12) 0%, transparent 70%);
+      }
+    }
+
+    /* SECTION 3: VENUE & TRAVEL GUIDE */
+    .venue-card {
+      background: radial-gradient(circle at 50% 0%, rgba(35, 14, 25, 0.82), rgba(18, 18, 25, 0.94));
+      border: 1px solid rgba(232, 202, 164, 0.3);
+      border-radius: 24px;
+      padding: 32px 26px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 25px rgba(207, 168, 116, 0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .venue-card:hover {
+      border-color: rgba(232, 202, 164, 0.45);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), 0 0 35px rgba(207, 168, 116, 0.15);
+    }
+    .venue-hotel-name {
+      font-family: 'Italiana', 'Cinzel', serif;
+      font-size: 26px;
+      color: var(--champagne-light);
+      margin-bottom: 6px;
+    }
+    .venue-address {
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 1.6;
+      max-width: 440px;
+      margin: 0 auto 22px;
+    }
+    .venue-quick-actions {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin: 28px auto 14px;
     }
 
-    .btn {
+    /* SECTION 4: BLESSINGS & CELEBRATION (Akshantalu) */
+    .blessings-station {
+      background: radial-gradient(circle at 50% 0%, rgba(70, 10, 24, 0.82), rgba(18, 18, 25, 0.95));
+      border: 1px solid rgba(232, 202, 164, 0.3);
+      border-radius: 24px;
+      padding: 32px 26px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(207, 168, 116, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .blessings-station:hover {
+      border-color: rgba(232, 202, 164, 0.45);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(207, 168, 116, 0.18);
+    }
+    .bless-btn-main {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      min-height: 48px;
-      padding: 12px 22px;
+      gap: 12px;
+      padding: 16px 36px;
       border-radius: 999px;
-      text-decoration: none;
-      cursor: pointer;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-      font-weight: 600;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 241, 0.92);
-      color: var(--deep-gold);
-      box-shadow: 0 6px 16px rgba(121, 87, 44, 0.08);
-      transition: all 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(121, 87, 44, 0.16);
-      background: #fff;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #bd985d, #80582c);
-      color: white;
-      border-color: #a98449;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #caa56a, #8f6433);
-      color: white;
-    }
-
-    .closing {
-      text-align: center;
-      padding: 40px 10px 20px;
-    }
-
-    .closing .ornament {
-      margin: 0 0 16px;
-    }
-
-    .closing h2 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(24px, 4.2vw, 36px);
-      font-weight: 600;
-      color: var(--deep-gold);
-      margin: 0 0 12px;
-      letter-spacing: 0.02em;
-    }
-
-    .closing p {
-      max-width: 500px;
-      margin: 0 auto;
-      color: var(--muted);
-      line-height: 1.7;
       font-size: 15px;
-    }
-
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 26px auto 0;
-    }
-
-    .count-box {
-      min-width: 70px;
-      padding: 13px 10px 11px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255, 250, 241, 0.88);
-      box-shadow: 0 6px 16px rgba(121, 87, 44, 0.06);
-    }
-
-    .count-box strong {
-      display: block;
-      font-family: 'Cinzel', serif;
-      font-size: 25px;
       font-weight: 700;
-      color: var(--deep-gold);
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      color: #140d07;
+      background: linear-gradient(135deg, #fef0db 0%, #cfa874 100%);
+      border: 1px solid #fff;
+      box-shadow: 0 14px 35px rgba(207, 168, 116, 0.35);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bless-btn-main:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 18px 45px rgba(207, 168, 116, 0.55);
+      background: linear-gradient(135deg, #fff7eb 0%, #ddb885 100%);
+    }
+    .bless-btn-main:active {
+      transform: scale(0.97);
+    }
+
+    .bless-counter-block {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .bless-digits {
+      font-family: 'Italiana', 'Cinzel', serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--champagne-light);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       font-variant-numeric: tabular-nums;
     }
-
-    .count-box span {
-      display: block;
-      margin-top: 5px;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
+    .bless-digits.pulse {
+      transform: scale(1.24);
+      color: #fff;
     }
-
-    footer {
-      text-align: center;
-      color: #9a8b78;
-      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    .bless-tag {
       font-size: 11px;
-      letter-spacing: 0.08em;
-      padding: 24px 10px 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .bless-status-text {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--champagne);
+      font-style: italic;
+      min-height: 20px;
     }
 
-    /* Falling Petals & Confetti */
-    .petal {
+    /* Falling Particles */
+    .akshantalu-petal {
       position: fixed;
-      top: -20px;
-      z-index: 4;
       pointer-events: none;
+      z-index: 9999;
       opacity: 0;
-      color: #c9a16c;
-      animation: fall linear infinite;
+      will-change: transform, opacity;
+      animation: cascadeFall linear forwards;
     }
-
-    @keyframes fall {
-      0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 0.55; }
-      90% { opacity: 0.45; }
-      100% { transform: translateY(110vh) rotate(340deg); opacity: 0; }
-    }
-
-    /* Burst Particle on Open */
-    .burst-particle {
-      position: fixed;
-      pointer-events: none;
-      z-index: 100;
-      font-size: 18px;
-      animation: burstFloat 1.8s ease-out forwards;
-    }
-
-    @keyframes burstFloat {
+    @keyframes cascadeFall {
       0% {
-        transform: translate(0, 0) scale(0.6) rotate(0deg);
-        opacity: 1;
+        transform: translate3d(var(--sx), -6vh, 0) rotate(0deg) scale(0.6);
+        opacity: 0;
       }
+      15% { opacity: 0.9; }
+      85% { opacity: 0.9; }
       100% {
-        transform: translate(var(--tx), var(--ty)) scale(1.3) rotate(var(--rot));
+        transform: translate3d(var(--ex), 106vh, 0) rotate(var(--rot)) scale(var(--sc));
         opacity: 0;
       }
     }
 
-    @media (max-width: 560px) {
-      .page {
-        width: min(100% - 24px, 860px);
-        padding-top: 16px;
-      }
-      .hero {
-        min-height: 88vh;
-        min-height: 88dvh;
-        padding: 30px 10px 35px;
-      }
-      .frame {
-        inset: 6px;
-        border-radius: 14px;
-      }
-      .actions {
-        gap: 9px;
-      }
-      .btn {
-        width: 100%;
-        max-width: 300px;
-      }
-      .countdown {
-        gap: 6px;
-      }
-      .count-box {
-        min-width: 60px;
-        padding: 10px 6px;
-      }
-      .count-box strong {
-        font-size: 21px;
-      }
-      .topline {
-        font-size: 9px;
-        letter-spacing: 0.22em;
-      }
-      .open-btn {
-        min-height: 50px;
-        padding: 0 28px;
-        font-size: 13px;
-      }
+    /* ==========================================================================
+       SECTION 5: COUNTDOWN & FINALE
+       ========================================================================== */
+    .countdown-section {
+      text-align: center;
+    }
+    .countdown-flex {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 24px auto 30px;
+    }
+    .count-tile {
+      flex: 1 1 75px;
+      max-width: 100px;
+      padding: 16px 8px;
+      border-radius: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--gold-border);
+      backdrop-filter: blur(12px);
+    }
+    .count-tile strong {
+      display: block;
+      font-family: 'Italiana', 'Cinzel', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--champagne-light);
+      font-variant-numeric: tabular-nums;
+    }
+    .count-tile span {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *:before, *:after { animation: none !important; transition: none !important; }
+    .closing-signoff {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: var(--champagne);
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+
+    footer {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #606070;
+      text-transform: uppercase;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ==========================================================================
+       MODERN FLOATING BOTTOM GLASS DOCK (iOS Style Navigation)
+       ========================================================================== */
+    .floating-dock {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      background: rgba(16, 16, 22, 0.85);
+      border: 1px solid var(--gold-border);
+      border-radius: 999px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(207, 168, 116, 0.12);
+    }
+
+    .dock-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .dock-tab:hover {
+      color: #fff;
+    }
+    .dock-tab.active {
+      color: #120e08;
+      background: linear-gradient(135deg, #fef0db, #cfa874);
+      box-shadow: 0 4px 15px rgba(207, 168, 116, 0.4);
+    }
+    .dock-tab-icon {
+      font-size: 14px;
+    }
+
+    @media (max-width: 560px) {
+      .curtain-seal { width: 115px; height: 115px; }
+      .floating-dock { bottom: 12px; padding: 5px 8px; gap: 4px; width: min(94vw, 380px); justify-content: space-between; }
+      .dock-tab { padding: 8px 10px; font-size: 11px; }
+      .dock-tab span:not(.dock-tab-icon) { display: none; }
+      .dock-tab-icon { font-size: 16px; margin: 0 auto; }
+      .dock-tab.active { padding: 8px 14px; }
+      .section-wrap { padding-top: 35px; margin-bottom: 50px; }
+      .timeline-container, .venue-card, .blessings-station { padding: 24px 16px; }
     }
   </style>
 </head>
 <body>
-  <div class="frame" aria-hidden="true"></div>
 
-  <main class="page">
-    <!-- Screen 1: Welcome & Envelope Cover Screen -->
-    <section class="hero" id="heroSection" aria-label="Welcome Invitation">
-      <div class="halo" aria-hidden="true"></div>
-      <div class="topline">With the blessings of the Almighty</div>
-      <div class="symbol" aria-hidden="true">ॐ</div>
-      <h1>Kalyani <span>&amp;</span> Nandu</h1>
-      <div class="subtitle">Engagement Ceremony</div>
-      <div class="ornament" aria-hidden="true">❦　✦　❦</div>
-      <p class="hero-copy">Two families, one beautiful beginning.<br>We warmly invite you to celebrate this auspicious occasion with us.</p>
-      
-      <div class="open-btn-container">
-        <button class="open-btn" id="openInvitationBtn" type="button" aria-expanded="false" aria-controls="invitationContent">
-          <span class="btn-icon">✉</span>
-          <span>Open Invitation</span>
-          <span>✦</span>
-        </button>
+  <!-- Ambient Lighting Mesh & Royal Backdrop Elements -->
+  <div class="ambient-mesh" aria-hidden="true"></div>
+
+  <!-- Royal Rotating Mandala Watermark Aura -->
+  <svg class="royal-mandala-backdrop" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="250" cy="250" r="235" stroke="url(#mGold)" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="250" cy="250" r="215" stroke="url(#mGold)" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="190" stroke="url(#mGold)" stroke-width="2" stroke-dasharray="12 6"/>
+    <circle cx="250" cy="250" r="160" stroke="url(#mGold)" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="130" stroke="url(#mGold)" stroke-width="2"/>
+    <circle cx="250" cy="250" r="95" stroke="url(#mGold)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <circle cx="250" cy="250" r="60" stroke="url(#mGold)" stroke-width="2"/>
+    <circle cx="250" cy="250" r="25" stroke="url(#mGold)" stroke-width="2" fill="rgba(245, 196, 107, 0.2)"/>
+    <!-- 16 Sacred Lotus Petals Array -->
+    <g stroke="url(#mGold)" stroke-width="1.8" fill="rgba(217, 155, 56, 0.08)">
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(22.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(45 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(67.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(90 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(112.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(135 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(157.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(180 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(202.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(225 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(247.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(270 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(292.5 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(315 250 250)"/>
+      <path d="M250 60 Q265 110 250 160 Q235 110 250 60 Z" transform="rotate(337.5 250 250)"/>
+    </g>
+    <!-- Outer Auspicious Star Jewels -->
+    <g stroke="url(#mGold)" stroke-width="1.2">
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(30 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(60 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(90 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(120 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(150 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(180 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(210 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(240 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(270 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(300 250 250)"/>
+      <circle cx="250" cy="20" r="4" fill="url(#mGold)" transform="rotate(330 250 250)"/>
+    </g>
+    <defs>
+      <linearGradient id="mGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff5db"/>
+        <stop offset="50%" stop-color="#f5c46b"/>
+        <stop offset="100%" stop-color="#aa701d"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Royal Gold Corner Filigrees -->
+  <svg class="royal-corner royal-corner-tl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0 0 L90 0 C60 10 30 30 20 60 C10 40 0 70 0 90 Z" fill="url(#cGold)" opacity="0.15"/>
+    <path d="M4 4 L80 4 C50 15 25 35 15 65 C8 45 4 60 4 80" stroke="url(#cGold)" stroke-width="2"/>
+    <path d="M8 8 L60 8 C40 18 20 35 12 55" stroke="url(#cGold)" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <circle cx="18" cy="18" r="5" fill="url(#cGold)"/>
+    <defs>
+      <linearGradient id="cGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff5db"/>
+        <stop offset="50%" stop-color="#f5c46b"/>
+        <stop offset="100%" stop-color="#aa701d"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <svg class="royal-corner royal-corner-tr" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0 0 L90 0 C60 10 30 30 20 60 C10 40 0 70 0 90 Z" fill="url(#cGold)" opacity="0.15"/>
+    <path d="M4 4 L80 4 C50 15 25 35 15 65 C8 45 4 60 4 80" stroke="url(#cGold)" stroke-width="2"/>
+    <path d="M8 8 L60 8 C40 18 20 35 12 55" stroke="url(#cGold)" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <circle cx="18" cy="18" r="5" fill="url(#cGold)"/>
+  </svg>
+
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================================
+       ACT 1: GRAND ROYAL VELVET CURTAINS (Opens on Tap)
+       ========================================================================== -->
+  <div class="curtain-overlay" id="curtainOverlay">
+    <div class="curtain-panel curtain-left"></div>
+    <div class="curtain-panel curtain-right"></div>
+    
+    <div class="curtain-seal-wrap" id="curtainSealWrap">
+      <div class="curtain-seal">
+        <div class="seal-halo"></div>
+        <div class="seal-om">ॐ</div>
+        <div class="seal-monogram">K &amp; N</div>
+        <div class="seal-subtext">✦ ROYAL UNION ✦</div>
       </div>
-      
-      <div class="hint" id="openHint">Tap to unfold the invitation card</div>
-    </section>
+      <button class="open-invitation-btn" id="openCurtainsBtn" type="button" aria-label="Open Engagement Invitation">
+        <span class="btn-shine"></span>
+        <span class="btn-icon-wrap">💌</span>
+        <span class="btn-title">Open Invitation</span>
+        <span class="btn-arrow-icon">➔</span>
+      </button>
+    </div>
+  </div>
 
-    <!-- Screen 2: Invitation Card & Details (Revealed on Open) -->
-    <div id="invitationContent">
-      <section class="invitation" id="invitation" aria-label="Invitation card">
-        <p class="section-kicker">✦ &nbsp; Official Invitation &nbsp; ✦</p>
-        <div class="poster-wrap" id="posterWrap">
-          <img class="poster" src="engagement-invitation.png" alt="Kalyani and Nandu's engagement invitation card with event details">
+  <!-- Top Navigation (Brand mark & Audio Toggle) -->
+  <header class="top-nav">
+    <div class="brand-mark">K &amp; N · 2026</div>
+
+    <button class="audio-pill" id="audioToggleBtn" type="button" aria-label="Toggle ceremony song Kannil Kannil">
+      <div class="equalizer-bars" aria-hidden="true">
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+      </div>
+      <span id="audioLabel">🎵 Kannil Kannil (Play)</span>
+    </button>
+  </header>
+
+  <!-- Background Ceremony Song (Kannil Kannil - Sita Ramam) -->
+  <audio id="bgMusic" preload="auto" loop playsinline>
+    <source src="kannil-kannil.mp3" type="audio/mpeg">
+    <source src="ceremony-song.mp3" type="audio/mpeg">
+    <source src="_Kannil_Kannil_Sitaramam_Flute_Kannil_Kannil_Kaanunna_Kalyanam_Violin_Ringtone_(by Fringster.com).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Main Multi-Section Content -->
+  <main class="app-scroller">
+    
+    <!-- SECTION 1: INVITATION HERO & 3D HOLOGRAPHIC CARD -->
+    <section class="section-wrap" id="invitationSection" aria-label="Official Engagement Invitation">
+      <div class="hero-box">
+        <div class="shloka-eyebrow">With the Blessings of our Families</div>
+        <h1 class="title-names">Kalyani <span class="amp">&amp;</span> Nandu</h1>
+        <div class="event-type">The Engagement Ceremony</div>
+        <p class="hero-narrative">
+          Two souls, two families, one timeless beginning.<br>
+          We warmly request the honor of your gracious presence and blessings to celebrate this auspicious union.
+        </p>
+
+        <!-- 3D HOLOGRAPHIC TILT INVITATION POSTER -->
+        <div class="stage-3d">
+          <div class="card-3d-wrap" id="card3dWrap">
+            <div class="hologram-glare" id="hologramGlare"></div>
+            <img class="poster-media" src="engagement-card.png?v=fresh" alt="Official engagement invitation card for Kalyani and Nandu">
+          </div>
+          <div class="tilt-notice">
+            <span>✨</span> Move mouse or tilt phone for 3D Holographic Glare <span>✨</span>
+          </div>
         </div>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic" target="_blank" rel="noopener noreferrer">
-            📍 &nbsp; Explore Venue
+        <!-- Quick Action Buttons -->
+        <div class="action-row">
+          <a class="btn-pill btn-pill-gold" href="https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic" target="_blank" rel="noopener noreferrer">
+            📍 &nbsp; Venue (Hotel Surya Grands)
           </a>
-          <button class="btn" id="calendarBtn" type="button">
-            📅 &nbsp; Save the Date
+          <button class="btn-pill" id="calendarBtn" type="button">
+            📅 &nbsp; Add to Calendar
           </button>
-          <button class="btn" id="shareBtn" type="button">
+          <button class="btn-pill" id="shareBtn" type="button">
             ✨ &nbsp; Share on WhatsApp
           </button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="closing" aria-label="Countdown">
-        <div class="ornament" aria-hidden="true">✦　❦　✦</div>
-        <h2>The countdown to our special day</h2>
-        <p>Wednesday, 25 November 2026 · 9:30 AM onwards<br><strong>Hotel Surya Grands</strong>, Vijayawada</p>
-        
-        <div class="countdown" id="countdown" aria-label="Countdown to the engagement">
-          <div class="count-box"><strong id="days">—</strong><span>Days</span></div>
-          <div class="count-box"><strong id="hours">—</strong><span>Hours</span></div>
-          <div class="count-box"><strong id="minutes">—</strong><span>Minutes</span></div>
-          <div class="count-box"><strong id="seconds">—</strong><span>Seconds</span></div>
+    <!-- LUXURY BENTO GRID: CEREMONY, VENUE & BLESSINGS -->
+    <div class="bento-container" id="bentoSection">
+      <!-- LEFT COLUMN: Auspicious Ceremony Timeline -->
+      <section class="bento-card bento-schedule" id="scheduleSection" aria-label="Ceremony Schedule">
+        <div class="timeline-container">
+          <div>
+            <div class="card-badge">✨ Sacred Muhurtham</div>
+            <h2 class="section-headline">Auspicious Program</h2>
+            <p class="section-subhead">Wednesday, 25 November 2026 · Schedule of Events</p>
+          </div>
+
+          <div class="timeline-flow">
+            <div class="timeline-card">
+              <div class="time-badge">09:30 AM</div>
+              <div class="event-info">
+                <strong>Auspicious Muhurtham &amp; Ring Exchange</strong>
+                <span>Sacred engagement rituals with family blessings</span>
+              </div>
+            </div>
+
+            <!-- ROYAL ANIME COUPLE - WALKING & RING EXCHANGE ANIMATED STAGE -->
+            <div class="anime-exchange-stage" id="animeExchangeStage" title="Tap to replay ring exchange!">
+              <!-- Romantic Garden Background & Fairy Lights -->
+              <div class="anime-stage-bg"></div>
+              <div class="anime-fairy-lights"></div>
+
+              <!-- Floor Aisle & Center Spotlight -->
+              <div class="anime-stage-floor"></div>
+              <div class="anime-center-spotlight"></div>
+
+              <!-- Floating Hearts Layer -->
+              <div class="anime-floating-hearts">
+                <span class="anime-heart ah1">💖</span>
+                <span class="anime-heart ah2">💕</span>
+                <span class="anime-heart ah3">💖</span>
+              </div>
+
+              <!-- Center Ring Starburst Flare -->
+              <div class="anime-ring-climax">
+                <span class="ring-star-flare">✨</span>
+              </div>
+
+              <!-- Anime Groom (Nandu) Walking Actor -->
+              <div class="anime-actor-wrap anime-groom-wrap">
+                <img src="anime-groom-transparent.png" alt="Anime groom Nandu in royal green sherwani holding engagement ring" class="anime-actor-img">
+              </div>
+
+              <!-- Anime Bride (Kalyani) Walking Actor -->
+              <div class="anime-actor-wrap anime-bride-wrap">
+                <img src="anime-bride-transparent.png" alt="Anime bride Kalyani in pink silk saree reaching out with engagement ring" class="anime-actor-img">
+              </div>
+
+              <!-- Status Badge -->
+              <div class="anime-stage-badge">
+                <div class="anime-badge-tag">
+                  <span>💍</span>
+                  <span>Kalyani &amp; Nandu · Ring Exchange</span>
+              </div>
+            </div>
+
+            <!-- CEREMONY SONG PLAYER PILL -->
+            <div class="anime-song-badge">
+              <span class="anime-song-text">🎵 Ceremony Song: <strong>Kannil Kannil (Sita Ramam)</strong></span>
+              <button type="button" class="anime-music-play-btn" id="animePlayBtn">▶ Play Song</button>
+            </div>
+
+            <div class="timeline-card">
+              <div class="time-badge">11:00 AM</div>
+              <div class="event-info">
+                <strong>Photography &amp; Congratulations</strong>
+                <span>Special moments with friends, relatives &amp; guests</span>
+              </div>
+            </div>
+
+            <div class="timeline-card">
+              <div class="time-badge">12:30 PM</div>
+              <div class="event-info">
+                <strong>Grand Festive Lunch (విందు భోజనం)</strong>
+                <span>Celebratory banquet and feast honoring the occasion</span>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="ornament" aria-hidden="true" style="margin-top:28px">❦　✦　❦</div>
-        <p style="font-style:italic;color:var(--deep-gold);font-size:16px;">With the love and blessings of both our families</p>
       </section>
+
+      <!-- RIGHT COLUMN: Venue & Sacred Blessings Stack -->
+      <div class="bento-right-col">
+        <!-- Celebration Venue -->
+        <section class="bento-card bento-venue" id="venueSection" aria-label="Venue and Location">
+          <div class="venue-card">
+            <div class="card-badge">📍 Prime Landmark</div>
+            <h2 class="section-headline">Celebration Venue</h2>
+            <div class="venue-hotel-name">Hotel Surya Grands</div>
+            <p class="venue-address">
+              Near Food Junction, Ibaco, Vijayawada, Andhra Pradesh
+            </p>
+
+            <div class="venue-quick-actions">
+              <a class="btn-pill btn-pill-gold" href="https://maps.app.goo.gl/ZRQBBzj48xZXCBuy7?g_st=ic" target="_blank" rel="noopener noreferrer">
+                🗺️ &nbsp; Open in Google Maps
+              </a>
+              <a class="btn-pill" href="tel:+919618080095" title="Call +91 96180 80095 for Venue Directions">
+                📞 &nbsp; Call for Directions (+91 96180 80095)
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sacred Blessings Altar -->
+        <section class="bento-card bento-blessings" id="blessingsSection" aria-label="Shower Blessings">
+          <div class="blessings-station">
+            <div class="card-badge">🌾 Sacred Tradition</div>
+            <h2 class="section-headline">Shower Your Blessings</h2>
+            <p class="section-subhead">Bestow your sacred Akshantalu &amp; flowers on Kalyani &amp; Nandu</p>
+
+            <button class="bless-btn-main" id="blessBtn" type="button">
+              <span>🌾 &nbsp; Shower Akshantalu (ఆశీర్వదించండి) &nbsp; ✨</span>
+            </button>
+
+            <div class="bless-counter-block">
+              <div class="bless-digits" id="blessDigits">1,428</div>
+              <div class="bless-tag">Sacred Blessings Bestowed</div>
+            </div>
+            <div class="bless-status-text" id="blessStatusText"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- SECTION 5: COUNTDOWN & SIGN-OFF -->
+    <section class="section-wrap countdown-section" id="countdownSection" aria-label="Event Countdown">
+      <h2 class="section-headline">The Countdown</h2>
+      <p class="section-subhead">Until we begin this forever journey together</p>
+
+      <div class="countdown-flex" id="countdown">
+        <div class="count-tile"><strong id="days">—</strong><span>Days</span></div>
+        <div class="count-tile"><strong id="hours">—</strong><span>Hours</span></div>
+        <div class="count-tile"><strong id="minutes">—</strong><span>Minutes</span></div>
+        <div class="count-tile"><strong id="seconds">—</strong><span>Seconds</span></div>
+      </div>
+
+      <div class="closing-signoff">
+        With the love, respect &amp; warm compliments of both our families
+      </div>
 
       <footer>Made with love for Kalyani &amp; Nandu · 25 November 2026</footer>
-    </div>
+    </section>
   </main>
 
+  <!-- ==========================================================================
+       MODERN FLOATING BOTTOM GLASS DOCK (iOS Style Navigation)
+       ========================================================================== -->
+  <nav class="floating-dock" aria-label="Quick Navigation">
+    <a class="dock-tab active" href="#invitationSection" data-target="invitationSection">
+      <span class="dock-tab-icon">📜</span>
+      <span>Card</span>
+    </a>
+    <a class="dock-tab" href="#scheduleSection" data-target="scheduleSection">
+      <span class="dock-tab-icon">⏳</span>
+      <span>Program</span>
+    </a>
+    <a class="dock-tab" href="#venueSection" data-target="venueSection">
+      <span class="dock-tab-icon">📍</span>
+      <span>Venue</span>
+    </a>
+    <a class="dock-tab" href="#blessingsSection" data-target="blessingsSection">
+      <span class="dock-tab-icon">🌾</span>
+      <span>Bless</span>
+    </a>
+  </nav>
+
   <script>
-    // Reveal Invitation Interaction
-    const openBtn = document.getElementById("openInvitationBtn");
-    const invitationContent = document.getElementById("invitationContent");
-    const heroSection = document.getElementById("heroSection");
-    const openHint = document.getElementById("openHint");
+    // ==========================================================================
+    // 1. FLOATING PARTICLES CANVAS
+    // ==========================================================================
+    const canvas = document.getElementById("particlesCanvas");
+    const ctx = canvas.getContext("2d");
 
-    function triggerConfettiBurst() {
-      const symbols = ["🌸", "✦", "❀", "❦", "✨", "🏵️", "💛", "✧"];
-      const count = 28;
-      const rect = openBtn.getBoundingClientRect();
-      const originX = rect.left + rect.width / 2;
-      const originY = rect.top + rect.height / 2;
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
 
-      for (let i = 0; i < count; i++) {
-        const particle = document.createElement("div");
-        particle.className = "burst-particle";
-        particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-        particle.style.left = originX + "px";
-        particle.style.top = originY + "px";
+    window.addEventListener("resize", () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
 
-        const angle = (i / count) * 2 * Math.PI + (Math.random() - 0.5) * 0.5;
-        const distance = 80 + Math.random() * 220;
-        const tx = Math.cos(angle) * distance + "px";
-        const ty = (Math.sin(angle) * distance - 40) + "px";
-        const rot = (Math.random() * 360) + "deg";
+    // Layer 1: Ambient Warm Golden Bokeh Orbs (Candlelight Glows)
+    const bokehOrbs = [];
+    const BOKEH_COUNT = 14;
+    for (let i = 0; i < BOKEH_COUNT; i++) {
+      bokehOrbs.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: 22 + Math.random() * 32,
+        vy: -0.2 - Math.random() * 0.3,
+        swaySpeed: 0.008 + Math.random() * 0.012,
+        swayWidth: 20 + Math.random() * 30,
+        baseX: Math.random() * width,
+        angle: Math.random() * Math.PI * 2,
+        alpha: 0.12 + Math.random() * 0.18,
+        color: Math.random() > 0.4 ? "245, 196, 107" : "217, 155, 56"
+      });
+    }
 
-        particle.style.setProperty("--tx", tx);
-        particle.style.setProperty("--ty", ty);
-        particle.style.setProperty("--rot", rot);
+    // Layer 2: Sparkling 4-Point Golden Starbursts (✦)
+    const sparkles = [];
+    const SPARKLE_COUNT = 38;
+    for (let i = 0; i < SPARKLE_COUNT; i++) {
+      sparkles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: 3.5 + Math.random() * 4.5,
+        alpha: 0.2 + Math.random() * 0.7,
+        pulseSpeed: 0.02 + Math.random() * 0.03,
+        vy: -0.15 - Math.random() * 0.25,
+        rot: Math.random() * Math.PI,
+        rotSpeed: (Math.random() - 0.5) * 0.02
+      });
+    }
 
-        document.body.appendChild(particle);
-        setTimeout(() => particle.remove(), 1900);
+    // Layer 3: Romantic Silk Rose & Golden Petals Drifting Downward
+    const petals = [];
+    const PETAL_COUNT = 16;
+    for (let i = 0; i < PETAL_COUNT; i++) {
+      petals.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        w: 12 + Math.random() * 8,
+        h: 7 + Math.random() * 5,
+        vy: 0.4 + Math.random() * 0.55,
+        vx: 0.2 + Math.random() * 0.35,
+        flip: Math.random() * Math.PI,
+        flipSpeed: 0.015 + Math.random() * 0.025,
+        roll: Math.random() * Math.PI,
+        rollSpeed: 0.01 + Math.random() * 0.02,
+        alpha: 0.35 + Math.random() * 0.45,
+        colorType: Math.random() > 0.4 ? "rose" : (Math.random() > 0.5 ? "gold" : "blush")
+      });
+    }
+
+    function drawStar4Point(cx, cy, spikes, outerRadius, innerRadius, alpha) {
+      let rot = (Math.PI / 2) * 3;
+      let x = cx;
+      let y = cy;
+      const step = Math.PI / spikes;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(cx, cy - outerRadius);
+      for (let i = 0; i < spikes; i++) {
+        x = cx + Math.cos(rot) * outerRadius;
+        y = cy + Math.sin(rot) * outerRadius;
+        ctx.lineTo(x, y);
+        rot += step;
+
+        x = cx + Math.cos(rot) * innerRadius;
+        y = cy + Math.sin(rot) * innerRadius;
+        ctx.lineTo(x, y);
+        rot += step;
+      }
+      ctx.lineTo(cx, cy - outerRadius);
+      ctx.closePath();
+      ctx.fillStyle = `rgba(255, 245, 219, ${alpha})`;
+      ctx.shadowColor = "rgba(245, 196, 107, 0.85)";
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function renderParticles() {
+      ctx.clearRect(0, 0, width, height);
+
+      // 1. Draw Golden Bokeh Orbs
+      for (let b of bokehOrbs) {
+        b.y += b.vy;
+        b.angle += b.swaySpeed;
+        b.x = b.baseX + Math.sin(b.angle) * b.swayWidth;
+
+        if (b.y < -b.r * 2) {
+          b.y = height + b.r * 2;
+          b.baseX = Math.random() * width;
+        }
+
+        const grad = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+        grad.addColorStop(0, `rgba(${b.color}, ${b.alpha})`);
+        grad.addColorStop(0.5, `rgba(${b.color}, ${b.alpha * 0.45})`);
+        grad.addColorStop(1, `rgba(${b.color}, 0)`);
+
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 2. Draw Sparkling Starbursts
+      for (let s of sparkles) {
+        s.y += s.vy;
+        s.alpha += Math.sin(Date.now() * s.pulseSpeed * 0.1) * 0.015;
+        const currentAlpha = Math.max(0.15, Math.min(0.9, s.alpha));
+
+        if (s.y < -15) {
+          s.y = height + 15;
+          s.x = Math.random() * width;
+        }
+
+        drawStar4Point(s.x, s.y, 4, s.size, s.size * 0.32, currentAlpha);
+      }
+
+      // 3. Draw Romantic Falling Silk Petals (Tumbling in 3D)
+      for (let p of petals) {
+        p.y += p.vy;
+        p.x += Math.sin(p.flip) * 0.75 + p.vx * 0.3;
+        p.flip += p.flipSpeed;
+        p.roll += p.rollSpeed;
+
+        if (p.y > height + 20) {
+          p.y = -20;
+          p.x = Math.random() * width;
+        }
+        if (p.x > width + 20) p.x = -20;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.roll);
+        const scaleY = Math.cos(p.flip);
+        ctx.scale(1, Math.abs(scaleY) > 0.1 ? scaleY : 0.1);
+
+        ctx.beginPath();
+        ctx.moveTo(0, -p.h);
+        ctx.bezierCurveTo(p.w, -p.h, p.w, p.h, 0, p.h);
+        ctx.bezierCurveTo(-p.w * 0.6, p.h, -p.w * 0.6, -p.h, 0, -p.h);
+
+        let grad;
+        if (p.colorType === "rose") {
+          grad = ctx.createLinearGradient(-p.w, -p.h, p.w, p.h);
+          grad.addColorStop(0, `rgba(224, 60, 90, ${p.alpha})`);
+          grad.addColorStop(1, `rgba(140, 15, 35, ${p.alpha * 0.8})`);
+        } else if (p.colorType === "blush") {
+          grad = ctx.createLinearGradient(-p.w, -p.h, p.w, p.h);
+          grad.addColorStop(0, `rgba(255, 175, 190, ${p.alpha * 0.9})`);
+          grad.addColorStop(1, `rgba(215, 100, 130, ${p.alpha * 0.7})`);
+        } else {
+          grad = ctx.createLinearGradient(-p.w, -p.h, p.w, p.h);
+          grad.addColorStop(0, `rgba(255, 205, 80, ${p.alpha * 0.9})`);
+          grad.addColorStop(1, `rgba(217, 130, 20, ${p.alpha * 0.75})`);
+        }
+
+        ctx.fillStyle = grad;
+        ctx.shadowColor = "rgba(0, 0, 0, 0.4)";
+        ctx.shadowBlur = 4;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      requestAnimationFrame(renderParticles);
+    }
+    renderParticles();
+
+    // ==========================================================================
+    // 2. GRAND VELVET CURTAINS OPENING
+    // ==========================================================================
+    const curtainOverlay = document.getElementById("curtainOverlay");
+    const curtainSealWrap = document.getElementById("curtainSealWrap");
+
+    function openCurtainsReveal() {
+      if (curtainOverlay.classList.contains("opened")) return;
+      playBellChime();
+      playCeremonyMusic();
+      curtainOverlay.classList.add("opened");
+    }
+    curtainSealWrap.addEventListener("click", openCurtainsReveal);
+    curtainOverlay.addEventListener("click", openCurtainsReveal);
+    const openCurtainsBtn = document.getElementById("openCurtainsBtn");
+    if (openCurtainsBtn) {
+      openCurtainsBtn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        openCurtainsReveal();
+      });
+    }
+
+    // ==========================================================================
+    // 3. 3D HOLOGRAPHIC GYROSCOPE & MOUSE TILT ON INVITATION CARD
+    // ==========================================================================
+    const card3dWrap = document.getElementById("card3dWrap");
+
+    function applyCardTilt(clientX, clientY) {
+      const rect = card3dWrap.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotX = -((y - centerY) / centerY) * 12;
+      const rotY = ((x - centerX) / centerX) * 12;
+
+      card3dWrap.style.transform = `perspective(1400px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+      card3dWrap.style.setProperty("--gx", `${(x / rect.width) * 100}%`);
+      card3dWrap.style.setProperty("--gy", `${(y / rect.height) * 100}%`);
+    }
+
+    card3dWrap.addEventListener("mousemove", (e) => {
+      applyCardTilt(e.clientX, e.clientY);
+    });
+
+    card3dWrap.addEventListener("mouseleave", () => {
+      card3dWrap.style.transform = "perspective(1400px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    });
+
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener("deviceorientation", (e) => {
+        if (!e.gamma || !e.beta) return;
+        const rect = card3dWrap.getBoundingClientRect();
+        if (rect.top > window.innerHeight || rect.bottom < 0) return;
+
+        const tiltX = Math.max(-20, Math.min(20, e.beta - 45));
+        const tiltY = Math.max(-20, Math.min(20, e.gamma));
+
+        card3dWrap.style.transform = `perspective(1400px) rotateX(${-tiltX * 0.45}deg) rotateY(${tiltY * 0.45}deg)`;
+        card3dWrap.style.setProperty("--gx", `${50 + tiltY * 1.5}%`);
+        card3dWrap.style.setProperty("--gy", `${50 + tiltX * 1.5}%`);
+      });
+    }
+
+    // ==========================================================================
+    // 4. FLOATING DOCK ACTIVE TAB SPY & SMOOTH SCROLL
+    // ==========================================================================
+    const dockTabs = document.querySelectorAll(".dock-tab");
+    const sections = ["invitationSection", "scheduleSection", "venueSection", "blessingsSection"].map(id => document.getElementById(id));
+
+    window.addEventListener("scroll", () => {
+      let currentSectionId = "invitationSection";
+      const scrollPos = window.scrollY + 200;
+
+      for (let sec of sections) {
+        if (sec && sec.offsetTop <= scrollPos) {
+          currentSectionId = sec.id;
+        }
+      }
+
+      dockTabs.forEach(tab => {
+        if (tab.getAttribute("data-target") === currentSectionId) {
+          tab.classList.add("active");
+        } else {
+          tab.classList.remove("active");
+        }
+      });
+    }, { passive: true });
+
+    dockTabs.forEach(tab => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = tab.getAttribute("data-target");
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // ==========================================================================
+    // 5. CEREMONY BACKGROUND SONG CONTROLLER (Enna Solla - Thangamagan)
+    // ==========================================================================
+    const bgMusic = document.getElementById("bgMusic");
+    const audioToggleBtn = document.getElementById("audioToggleBtn");
+    const audioLabel = document.getElementById("audioLabel");
+    const animePlayBtn = document.getElementById("animePlayBtn");
+    let isPlaying = false;
+    let audioCtx = null;
+
+    function ensureAudio() {
+      if (!audioCtx) {
+        const AudioClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioClass) audioCtx = new AudioClass();
+      }
+      if (audioCtx && audioCtx.state === "suspended") {
+        audioCtx.resume();
       }
     }
 
-    openBtn.addEventListener("click", () => {
-      // 1. Particle burst celebration
-      triggerConfettiBurst();
+    function updateAudioUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        audioToggleBtn.classList.add("playing");
+        audioLabel.textContent = "🎵 Kannil Kannil (Playing)";
+        if (animePlayBtn) animePlayBtn.textContent = "⏸ Pause Song";
+      } else {
+        audioToggleBtn.classList.remove("playing");
+        audioLabel.textContent = "▶ Play: Kannil Kannil";
+        if (animePlayBtn) animePlayBtn.textContent = "▶ Play Song";
+      }
+    }
 
-      // 2. Reveal content
-      invitationContent.classList.add("show");
-      openBtn.setAttribute("aria-expanded", "true");
-      heroSection.classList.add("opened");
+    function playCeremonyMusic() {
+      if (!bgMusic) return;
+      ensureAudio();
+      bgMusic.volume = 1.0;
+      const playPromise = bgMusic.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          updateAudioUI(true);
+        }).catch(err => {
+          console.log("Music play waiting for user gesture:", err);
+        });
+      }
+    }
 
-      // Update button state
-      openBtn.style.animation = "none";
-      openBtn.innerHTML = '<span class="btn-icon">✓</span><span>Invitation Opened</span><span>↓</span>';
-      openHint.textContent = "Scroll down to view full ceremony card & venue";
+    function pauseCeremonyMusic() {
+      if (!bgMusic) return;
+      bgMusic.pause();
+      updateAudioUI(false);
+    }
 
-      // 3. Smooth scroll down to the invitation card
-      setTimeout(() => {
-        const posterWrap = document.getElementById("posterWrap");
-        if (posterWrap) {
-          posterWrap.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      }, 350);
+    function toggleAudio() {
+      if (bgMusic && (bgMusic.paused || !isPlaying)) {
+        playCeremonyMusic();
+      } else {
+        pauseCeremonyMusic();
+      }
+    }
+
+    if (audioToggleBtn) audioToggleBtn.addEventListener("click", toggleAudio);
+    if (animePlayBtn) animePlayBtn.addEventListener("click", toggleAudio);
+
+    if (bgMusic) {
+      bgMusic.addEventListener("play", () => updateAudioUI(true));
+      bgMusic.addEventListener("pause", () => updateAudioUI(false));
+      bgMusic.addEventListener("playing", () => updateAudioUI(true));
+    }
+
+    // Auto unblock audio on first interaction if blocked by browser policy
+    const handleFirstGesture = () => {
+      ensureAudio();
+      if (bgMusic && bgMusic.paused && curtainOverlay.classList.contains("opened")) {
+        playCeremonyMusic();
+      }
+    };
+    document.addEventListener("click", handleFirstGesture, { passive: true });
+    document.addEventListener("touchstart", handleFirstGesture, { passive: true });
+
+    function playBellChime() {
+      ensureAudio();
+      if (!audioCtx) return;
+      const notes = [587.33, 880, 1174.66];
+      const now = audioCtx.currentTime;
+
+      notes.forEach((freq, idx) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+
+        const peak = 0.06 / (idx + 1);
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(peak, now + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.2);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start(now);
+        osc.stop(now + 2.4);
+      });
+    }
+
+    // ==========================================================================
+    // 6. SACRED AKSHANTALU & FLOWER SHOWER
+    // ==========================================================================
+    const blessBtn = document.getElementById("blessBtn");
+    const blessDigits = document.getElementById("blessDigits");
+    const blessStatusText = document.getElementById("blessStatusText");
+
+    const BASE_BLESSINGS_COUNT = 1428;
+    let localTaps = parseInt(localStorage.getItem("kn_super_blessings") || "0", 10);
+    function updateCounter() {
+      blessDigits.textContent = (BASE_BLESSINGS_COUNT + localTaps).toLocaleString("en-IN");
+    }
+    updateCounter();
+
+    function triggerCascadeShower() {
+      const symbols = ["🌾", "🟡", "🌸", "❀", "✨", "💛", "🌼"];
+      const count = 45;
+
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement("div");
+        p.className = "akshantalu-petal";
+        p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+        const startX = (Math.random() * 100) + "vw";
+        const drift = (Math.random() * 80 - 40);
+        const endX = `calc(${startX} + ${drift}px)`;
+        const rot = (Math.random() * 720 - 360) + "deg";
+        const sc = 0.8 + Math.random() * 0.6;
+        const dur = 2.2 + Math.random() * 1.5;
+        const delay = Math.random() * 0.4;
+
+        p.style.setProperty("--sx", startX);
+        p.style.setProperty("--ex", endX);
+        p.style.setProperty("--rot", rot);
+        p.style.setProperty("--sc", sc);
+        p.style.animationDuration = dur + "s";
+        p.style.animationDelay = delay + "s";
+        p.style.fontSize = (15 + Math.random() * 11) + "px";
+
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), (dur + delay) * 1000 + 200);
+      }
+    }
+
+    blessBtn.addEventListener("click", () => {
+      playBellChime();
+      if (navigator.vibrate) {
+        try { navigator.vibrate([30, 20, 30]); } catch (e) {}
+      }
+
+      triggerCascadeShower();
+
+      localTaps += 1;
+      localStorage.setItem("kn_super_blessings", String(localTaps));
+      updateCounter();
+
+      blessDigits.classList.add("pulse");
+      setTimeout(() => blessDigits.classList.remove("pulse"), 300);
+
+      const phrases = [
+        "🌸 మీ పవిత్ర ఆశీర్వాదాలు వధూవరులకు అందాయి!",
+        "✨ Thank you for showering divine blessings!",
+        "🌾 Mangalam Shubham! Sacred Akshantalu showered!"
+      ];
+      blessStatusText.textContent = phrases[Math.floor(Math.random() * phrases.length)];
     });
 
-    // Countdown Timer Logic
-    const eventDate = new Date("2026-11-25T09:30:00+05:30");
+    // ==========================================================================
+    // 6B. ROYAL ANIME COUPLE RING EXCHANGE INTERACTION
+    // ==========================================================================
+    const animeExchangeStage = document.getElementById("animeExchangeStage");
+    if (animeExchangeStage) {
+      animeExchangeStage.addEventListener("click", (e) => {
+        playBellChime();
+        if (navigator.vibrate) {
+          try { navigator.vibrate([30, 20, 40]); } catch (err) {}
+        }
+
+        // Restart actor animations smoothly on tap to replay immediately!
+        const actors = animeExchangeStage.querySelectorAll(".anime-actor-wrap, .anime-ring-climax, .anime-heart");
+        actors.forEach(el => {
+          el.style.animation = "none";
+          void el.offsetHeight; /* trigger reflow */
+          el.style.animation = "";
+        });
+
+        const rect = animeExchangeStage.getBoundingClientRect();
+        const originX = e.clientX || (rect.left + rect.width / 2);
+        const originY = e.clientY || (rect.top + rect.height / 2);
+
+        const ringSymbols = ["💍", "✨", "💖", "💎", "🌸", "✨", "💛"];
+        for (let i = 0; i < 20; i++) {
+          const spark = document.createElement("div");
+          spark.className = "ring-burst-particle";
+          spark.textContent = ringSymbols[Math.floor(Math.random() * ringSymbols.length)];
+          spark.style.left = originX + "px";
+          spark.style.top = originY + "px";
+
+          const angle = Math.random() * Math.PI * 2;
+          const dist = 50 + Math.random() * 130;
+          const dx = Math.cos(angle) * dist + "px";
+          const dy = Math.sin(angle) * dist - 30 + "px";
+
+          spark.style.setProperty("--dx", dx);
+          spark.style.setProperty("--dy", dy);
+          spark.style.fontSize = (16 + Math.random() * 14) + "px";
+
+          document.body.appendChild(spark);
+          setTimeout(() => spark.remove(), 1600);
+        }
+
+        localTaps += 1;
+        localStorage.setItem("kn_super_blessings", String(localTaps));
+        updateCounter();
+        blessDigits.classList.add("pulse");
+        setTimeout(() => blessDigits.classList.remove("pulse"), 300);
+      });
+    }
+
+    // ==========================================================================
+    // 7. COUNTDOWN TIMER (Wednesday, 25 Nov 2026, 9:30 AM)
+    // ==========================================================================
+    const eventTime = new Date("2026-11-25T09:30:00+05:30").getTime();
     const pad = n => String(n).padStart(2, "0");
 
     function updateCountdown() {
-      const diff = eventDate.getTime() - Date.now();
+      const diff = eventTime - Date.now();
       if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "<p>The celebration day is here — wishing both families a beautiful occasion!</p>";
+        document.getElementById("countdown").innerHTML = "<p style='color:var(--champagne-light);font-size:16px;'>The celebration day is here — wishing both families a joyous occasion!</p>";
         return;
       }
       const d = Math.floor(diff / 86400000);
@@ -653,7 +2205,9 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Save Date (.ics file generation)
+    // ==========================================================================
+    // 8. CALENDAR & WHATSAPP
+    // ==========================================================================
     document.getElementById("calendarBtn").addEventListener("click", () => {
       const ics = [
         "BEGIN:VCALENDAR",
@@ -683,11 +2237,10 @@
       URL.revokeObjectURL(url);
     });
 
-    // Share on WhatsApp / Native Web Share
     document.getElementById("shareBtn").addEventListener("click", async () => {
       const shareData = {
         title: "Kalyani & Nandu — Engagement Ceremony",
-        text: "You are warmly invited to Kalyani & Nandu's Engagement Ceremony on Wednesday, 25 November 2026 at 9:30 AM onwards at Hotel Surya Grands, Vijayawada.\n\nOpen invitation card:",
+        text: "You are warmly invited to Kalyani & Nandu's Engagement Ceremony on Wednesday, 25 November 2026 at Hotel Surya Grands, Vijayawada.\n\nOpen invitation card:",
         url: window.location.href
       };
 
@@ -696,25 +2249,10 @@
           await navigator.share(shareData);
         } catch (e) {}
       } else {
-        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
-        window.open(whatsappUrl, "_blank");
+        const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
+        window.open(waUrl, "_blank");
       }
     });
-
-    // Subtle Falling Petals Animation
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const symbols = ["✦", "❀", "✧", "🌸"];
-      for (let i = 0; i < 11; i++) {
-        const petal = document.createElement("span");
-        petal.className = "petal";
-        petal.textContent = symbols[i % symbols.length];
-        petal.style.left = (Math.random() * 100) + "vw";
-        petal.style.animationDuration = (12 + Math.random() * 10) + "s";
-        petal.style.animationDelay = (-Math.random() * 20) + "s";
-        petal.style.fontSize = (10 + Math.random() * 10) + "px";
-        document.body.appendChild(petal);
-      }
-    }
   </script>
 </body>
 </html>
